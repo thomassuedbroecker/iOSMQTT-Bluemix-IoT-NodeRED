@@ -1,4 +1,4 @@
-# "Just a Fake" is IoT Cloud, iOS and Bluemix sample
+# "Just a Fake" is a IoT Cloud, iOS and Bluemix sample
 
 This sample will be a combination, reuse and customization of part from the existing "IoT Starter for iOS" and "TempTracker_IoTBluemixMFPSample".
 
