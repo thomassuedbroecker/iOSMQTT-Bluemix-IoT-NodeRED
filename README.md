@@ -19,12 +19,18 @@ The objective is to help to understand how the integration technical works betwe
   2. Using a own IBM IoT Cloud as a Service in Bluemix
   4. Using the in Bluemix Cloundant, IoT Cloud and Watson
 
-## 2. Setup the Fake sample
+## 2. Setup the "Just a Fake" sample
 
 This is defined in the Bluemix related tasks and iOS related tasks.
 
 ## 2.1 Bluemix related tasks
 
+These tasks are
+  * Setup a account
+  * Create a Bluemix application
+  * Configure the Bluemix services
+  * Edit the Node-RED application
+  
 ### 2.1.1 Setup the Bluemix App
   1. Get a Bluemix Account (https://console.ng.bluemix.net)
   2. Instantiate the **IoT Foundation Starter** (https://console.ng.bluemix.net/catalog/starters/internet-of-things-foundation-starter/)
