@@ -32,23 +32,52 @@ After the creation of the Type you create a concrete Device this information is 
 
   1. Click under **Connect your devices** on the Button **Launch Dashboard**
   2. On the Dashboard you can see or **"Organization ID: XXXX"**
-  3. Click on **Devices** at the tab on the Dashboard
+  3. Click on **Devices** at the tabs on the Dashboard
   4. Now select  **"DEVICE TYPE"** in the new available tabs
   5. Click on **Create Type**
   6. Click on **Create Device Type**
   7. Give it the Name: **Sample** NOTE: _This name is used Hardcoded in the iOS Application._ and click Next.
 
-  NOTE: Code in Constants.m
+  NOTE: Code in **Constants.m**
 
-     `// IoT API Constants`
-     `// NSString * const IOTDeviceType        = @"iPhone";`
-     `//   *****************************************`
-     `//   Custom IoT Device Type`
-     `//   Depends what you have defined in your IoT`
-     `//   *****************************************`
-     `NSString * const IOTDeviceType        = @"Sample"; `
+     `// IoT API Constants
+      // NSString * const IOTDeviceType        = @"iPhone";
+      //   *****************************************
+      //   Custom IoT Device Type
+      //   Depends what you have defined in your IoT
+      //   *****************************************
+      NSString * const IOTDeviceType        = @"Sample";`
 
   8. _Optional:_ Here you can select additional information for your Device Type. Click **Next**
   9. Not insert any _Optional_ Metadata and click **Create**.
 
 ### 2.3 Define Device for the Internet of Things Foundation Service
+
+   1. Click on **Device** at the tabs on the Dashboard
+   2. Press Button **Add Device**
+   3. In the dialog **Add Device** choose the your create DeviceType Name _**Sample**_ and click **Next**
+   4. Enter the Device ID **12345689**  and press **Next** _Note: This value is Hardcoded in the iOS App_
+   5. Select **Next** NOTE: Don't add additional Metadata
+   6. Enter your own value **Provide a token (optional):** with **"MyIoT2016"** and click **Next**
+   and press **Next**
+   _Note: This value is Hardcoded in the iOS App_
+
+   NOTE: Code in **LoginViewController.m**
+
+    `- (void)viewDidLoad
+    {
+       [super viewDidLoad];
+       // Do any additional setup after loading the view.
+
+       self.authTokenField.secureTextEntry = YES;
+       AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+
+       self.organizationField.text = @"ff6cyz";
+       appDelegate.organization;
+       self.deviceIDField.text  = @"123456789";
+       appDelegate.deviceID;
+       self.authTokenField.text = @"MyIoT2016";
+       appDelegate.authToken;
+    }`
+
+    _NOTE: Now you have prepare your IoT Cloud with your own Device Type and Device with a ID and Security Validation information._
