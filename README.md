@@ -13,7 +13,7 @@ This sample will be a combination, reuse and customization of part from the exis
 ***
 ## 1. Introduction
 
-The objective is to help to understand how the integration technical works between:
+The objective is to help to understand how the integration technical works between own IoT Cloud, iOS App and Bluemix:
 
   1. Using the Mobile iOS Device as Sensor for input (Objective-C), to create fake Temperature data.
   2. Using a own IBM IoT Cloud as a Service in Bluemix
@@ -30,7 +30,7 @@ These tasks are
   * Create a Bluemix application
   * Configure the Bluemix services
   * Edit the Node-RED application
-  
+
 ### 2.1.1 Setup the Bluemix App
   1. Get a Bluemix Account (https://console.ng.bluemix.net)
   2. Instantiate the **IoT Foundation Starter** (https://console.ng.bluemix.net/catalog/starters/internet-of-things-foundation-starter/)
