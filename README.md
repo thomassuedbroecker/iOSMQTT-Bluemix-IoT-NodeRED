@@ -62,13 +62,13 @@ After the creation of the Type you create a concrete Device this information is 
 
   NOTE: Code in **Constants.m**
 
-      `// IoT API Constants
+      ` // IoT API Constants
        // NSString * const IOTDeviceType        = @"iPhone";
        //   *****************************************
        //   Custom IoT Device Type
        //   Depends what you have defined in your IoT
        //   *****************************************
-       NSString * const IOTDeviceType        = @"Sample";`
+       NSString * const IOTDeviceType        = @"Sample"; `
 
   8. _Optional:_ Here you can select additional information for your Device Type. Click **Next**
   9. Not insert any _Optional_ Metadata and click **Create**.
@@ -87,7 +87,7 @@ After the creation of the Type you create a concrete Device this information is 
 
    NOTE: Code in **LoginViewController.m**
 
-      `- (void)viewDidLoad
+      ` - (void)viewDidLoad
       {
        [super viewDidLoad];
        // Do any additional setup after loading the view.
@@ -101,14 +101,14 @@ After the creation of the Type you create a concrete Device this information is 
        appDelegate.deviceID;
        self.authTokenField.text = @"MyIoT2016";
        appDelegate.authToken;
-      }`
+      } `
 
-    _NOTE: Now you have prepared your IoT Cloud with your own Device Type and Device with a ID and Security Validation information._#
+    _NOTE: Now you have prepared your IoT Cloud with your own Device Type and Device with a ID and Security Validation information._
 
 ***
 ### 2.1.5 Define Device for the Internet of Things Foundation Service
 
-    1. Copy the ClipboardNodeRed-containsAllNodes.txt content into the Clipboard Either you have it cloned with git or you can get it from git.hub here:(http://bit.ly/1QC39ld)
+    1. Copy the ClipboardNodeRed-containsAllNodes.txt content into the Clipboard Either you have it cloned with git or you can get it from git.hub here:(http://bit.ly/20bqIC8)
     2. Import from Clipboard
 
 ***
