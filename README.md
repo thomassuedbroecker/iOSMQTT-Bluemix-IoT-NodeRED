@@ -5,6 +5,11 @@ This sample will be a combination, reuse and customization of part from the exis
 * [IoT Starter for iOS](https://github.com/Aiguo/iot-starter-for-ios)
 * [TempTracker_IoTBluemixMFPSample](https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample)
 
+**Table of content of the readme.md**
+
+  1. Introduction
+  2. Setup the Fake sample
+
 ***
 ## 1. Introduction
 
@@ -16,6 +21,11 @@ The objective is to help to understand how the integration technical works betwe
 
 ## 2. Setup the Fake sample
 
+This is defined in the Bluemix related tasks and iOS related tasks.
+
+## 2.1 Bluemix related tasks
+
+### 2.1.1 Setup the Bluemix App
   1. Get a Bluemix Account (https://console.ng.bluemix.net)
   2. Instantiate the **IoT Foundation Starter** (https://console.ng.bluemix.net/catalog/starters/internet-of-things-foundation-starter/)
   3. Give it a name **<<your app name>>**
@@ -23,12 +33,12 @@ The objective is to help to understand how the integration technical works betwe
   5. Select **Internet of Things Foundation** from the Catalog
   6. If the service is running click on the Service in your Bluemix application
 
-### 2.1 Configure the Internet of Things Foundation Service
+### 2.1.2 Configure the Internet of Things Foundation Service
 
 Now you have to define a DeviceType. This device type information, will be used be the iOS app to connect to the right device in the cloud.
 After the creation of the Type you create a concrete Device this information is also used Hardcoded in iOS app.
 
-### 2.1 Define DeviceType for the Internet of Things Foundation Service
+### 2.1.3 Define DeviceType for the Internet of Things Foundation Service
 
   1. Click under **Connect your devices** on the Button **Launch Dashboard**
   2. On the Dashboard you can see or **"Organization ID: XXXX"**
@@ -51,7 +61,7 @@ After the creation of the Type you create a concrete Device this information is 
   8. _Optional:_ Here you can select additional information for your Device Type. Click **Next**
   9. Not insert any _Optional_ Metadata and click **Create**.
 
-### 2.3 Define Device for the Internet of Things Foundation Service
+### 2.1.4 Define Device for the Internet of Things Foundation Service
 
    1. Click on **Device** at the tabs on the Dashboard
    2. Press Button **Add Device**
@@ -64,8 +74,8 @@ After the creation of the Type you create a concrete Device this information is 
 
    NOTE: Code in **LoginViewController.m**
 
-    `- (void)viewDidLoad
-    {
+     `- (void)viewDidLoad
+     {
        [super viewDidLoad];
        // Do any additional setup after loading the view.
 
@@ -78,6 +88,8 @@ After the creation of the Type you create a concrete Device this information is 
        appDelegate.deviceID;
        self.authTokenField.text = @"MyIoT2016";
        appDelegate.authToken;
-    }`
+     }`
 
-    _NOTE: Now you have prepare your IoT Cloud with your own Device Type and Device with a ID and Security Validation information._
+    _NOTE: Now you have prepared your IoT Cloud with your own Device Type and Device with a ID and Security Validation information._
+
+## 2.2 iOS related tasks
