@@ -87,21 +87,19 @@ After the creation of the Type you create a concrete Device this information is 
 
    NOTE: Code in **LoginViewController.m**
 
-      `(void)viewDidLoad
-      {
-       [super viewDidLoad];
-       // Do any additional setup after loading the view.
-
-       self.authTokenField.secureTextEntry = YES;
-       AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-
-       self.organizationField.text = @"ff6cyz";
-       appDelegate.organization;
-       self.deviceIDField.text  = @"123456789";
-       appDelegate.deviceID;
-       self.authTokenField.text = @"MyIoT2016";
-       appDelegate.authToken;
-      } `
+    `(void)viewDidLoad
+    {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+    self.authTokenField.secureTextEntry = YES;
+    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    self.organizationField.text = @"ff6cyz";
+    appDelegate.organization;
+    self.deviceIDField.text  = @"123456789";
+    appDelegate.deviceID;
+    self.authTokenField.text = @"MyIoT2016";
+    appDelegate.authToken;
+    } `
 
   _NOTE: Now you have prepared your IoT Cloud with your own Device Type and Device with a ID and Security Validation information._
 
