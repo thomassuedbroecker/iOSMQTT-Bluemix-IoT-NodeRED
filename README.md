@@ -38,13 +38,15 @@ After the creation of the Type you create a concrete Device this information is 
   6. Click on **Create Device Type**
   7. Give it the Name: **Sample** NOTE: _This name is used Hardcoded in the iOS Application._ and click Next.
 
-  ` // IoT API Constants
-   // NSString * const IOTDeviceType        = @"iPhone";
-   //   *****************************************
-   //   Custom IoT Device Type
-   //   Depends what you have defined in your IoT
-   //   *****************************************
-   NSString * const IOTDeviceType        = @"Sample"; `
+  NOTE: Code in Constants.m
+
+     `// IoT API Constants`
+     `// NSString * const IOTDeviceType        = @"iPhone";`
+     `//   *****************************************`
+     `//   Custom IoT Device Type`
+     `//   Depends what you have defined in your IoT`
+     `//   *****************************************`
+     `NSString * const IOTDeviceType        = @"Sample"; `
 
   8. _Optional:_ Here you can select additional information for your Device Type. Click **Next**
   9. Not insert any _Optional_ Metadata and click **Create**.
