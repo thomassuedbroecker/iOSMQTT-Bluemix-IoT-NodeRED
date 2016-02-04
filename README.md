@@ -104,10 +104,12 @@ After the creation of the Type you create a concrete Device this information is 
   _NOTE: Now you have prepared your IoT Cloud with your own Device Type and Device with a ID and Security Validation information._
 
 ***
-### 2.1.5 Define Device for the Internet of Things Foundation Service
+### 2.1.5 Node-RED Configuration
 
-  1. Copy the ClipboardNodeRed-containsAllNodes.txt content into the Clipboard Either you have it cloned with git or you can get it from git.hub here:(http://bit.ly/20bqIC8)
-  2. Import from Clipboard
+  1. On Bluemix, go to your application and click on the url to open your Node-RED
+  2. Delete the content of the default created sheet by selecting all and DEL
+  3. Copy the ClipboardNodeRed-containsAllNodes.txt content into the Clipboard Either you have it cloned with git or you can get it from git.hub here:(http://bit.ly/20bqIC8)
+  4. Import from Clipboard
 
 ***
 ### 2.2 iOS related tasks
