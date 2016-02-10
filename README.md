@@ -87,19 +87,19 @@ After the creation of the Type you create a concrete Device this information is 
 
    NOTE: Code in **LoginViewController.m**
 
-    `(void)viewDidLoad
-    {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    self.authTokenField.secureTextEntry = YES;
-    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-    self.organizationField.text = @"ff6cyz";
-    appDelegate.organization;
-    self.deviceIDField.text  = @"123456789";
-    appDelegate.deviceID;
-    self.authTokenField.text = @"MyIoT2016";
-    appDelegate.authToken;
-    } `
+      `(void)viewDidLoad
+      {
+      [super viewDidLoad];
+       // Do any additional setup after loading the view.
+       self.authTokenField.secureTextEntry = YES;
+       AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+       self.organizationField.text = @"ff6cyz";
+       appDelegate.organization;
+       self.deviceIDField.text  = @"123456789";
+       appDelegate.deviceID;
+       self.authTokenField.text = @"MyIoT2016";
+       appDelegate.authToken;
+      } `
 
   _NOTE: Now you have prepared your IoT Cloud with your own Device Type and Device with a ID and Security Validation information._
 
@@ -131,7 +131,7 @@ After the creation of the Type you create a concrete Device this information is 
   4. Optional: If you have defined own values you must change **deviceID** and **authToken** in _LoginViewController.m_ in operations _viewWillAppear_ and _viewDidLoad_
 
   5. Run the project on a real iOS iPhone or in the iOS Simulator
-  6. When you press send message Fake sensor data, will be send to you IoT cloud. 
+  6. When you press send message Fake sensor data, will be send to you IoT cloud.
 
 ***
 # 3. Source Folder content description
