@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>IBM Watson - Text To Speech</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+  <script type="text/javascript">
+    var socketaddy = "ws://" + window.location.host + "/ws/audio";
+
+    $(document).ready(function(){
+      var output = document.getElementById('output')
+      $('#output').on('playing', function () {
+          $('#text').text('Playing audio.')
+
+      });
+      $('#output').on('ended', function () {
+          $('#text').text('Waiting for audio...')
+
+      });
+      sock = new WebSocket(socketaddy);
+      sock.onopen = function(){
+          $('#text').text('Waiting for audio...');
+          console.log("Connected websocket");
+      };
+      sock.onerror = function(){
+          console.log("Websocket error");
+      };
+      sock.onclose = function () {
+          $('#text').text('Not connected. Refresh the page?')
+      }
+      sock.onmessage = function(evt){
+        console.log("Websocket message", evt);
+        output.src = window.URL.createObjectURL(evt.data);
+        output.play();
+      };
+    });
+  </script>
+
+</head>
+<body style="font-size: 56px; font-family: helvetica; text-align: center; margin-top: 100px;">
+  <div id="text">Connecting...</div>
+  <audio id="output"></audio>
+</body>
+</html>

@@ -1,5 +1,16 @@
+// Define different output options
+var msg1 = { payload:"undefined"};
+var msg2 = { payload:"undefined"};
+
+// if msg !0 null begin
 if ( msg !== null)
-{   // if msg !0 null begin
+{
+  // Check if there is any valid sensor data
+  if ((msg.payload.d.AmbTemp === undefined) &&
+      (msg.payload.d.ambient_temp === undefined) &&
+      (msg.payload.d.temp === undefined)) {
+      msg2.payload = "No valid Sensor IoT Data Input";
+  } else {
     // Create data object
     data = new Object();
 
@@ -45,7 +56,7 @@ if ( msg !== null)
     }
 
     //-------------------------IPTEMP-------------------------------------------------
-    data.iptemp = "20.0000"; //default
+    data.iptemp = 20.0000; //default
     if (msg.payload.d.IRTemp !== undefined) {
         data.irtemp   = msg.payload.d.IRTemp;        // Typical Apple datastructure
     }
@@ -59,7 +70,7 @@ if ( msg !== null)
     }
 
     //-------------------------OPTICAL---------------------------------------------
-    data.optical = "0"; // default if not defined by others
+    data.optical = 0; // default if not defined by others
 
     if (msg.payload.d.optical !== undefined) {
         data.optical  = msg.payload.d.optical;      // Typical Apple datastructure
@@ -118,40 +129,42 @@ if ( msg !== null)
      data.deviceImageURI="img/container.png";
     }
 
-   // *****************
-   // Ehningen 48.65891, 8.940540000000055
-   // http://www.viewphotos.org/germany/coordinates-of-Ehningen-5390.html
-   data.gtfs_latitude  = "48.6589";
-   data.gtfs_longitude = "8.940540000000055";
+     // *****************
+     // Ehningen 48.65891, 8.940540000000055
+     // http://www.viewphotos.org/germany/coordinates-of-Ehningen-5390.html
+     data.gtfs_latitude  = "48.6589";
+     data.gtfs_longitude = "8.940540000000055";
 
-   if (data.sensorType !== undefined ){
-     data.sensorType = "Simplelink SensorTag - TI.com";
-   }
+     if (data.sensorType !== undefined ){
+       data.sensorType = "Simplelink SensorTag - TI.com";
+     }
 
-   // ******************
-   // Check Temperature and create message
-   // ******************
-   if ( data.temp < 25 )
-   {
-     data.message= data.date + "/" + data.time + " (" + data.temp + ") within safe limits";
-     data.status ="SAFE";
-   } else {
-     data.message= data.date + "/" + data.time + " (" + data.temp + ") is in critical limits";
-     data.status ="CRITICAL";
-   }
+     // ******************
+     // Check Temperature and create message
+     // ******************
+     if ( data.temp < 25 )
+     {
+       data.message= data.date + "/" + data.time + " (" + data.temp + ") within safe limits";
+       data.status ="SAFE";
+     } else {
+       data.message= data.date + "/" + data.time + " (" + data.temp + ") is in critical limits";
+       data.status ="CRITICAL";
+     }
 
-   // *****************
-   // Build data your own datastructure
-   // -> create json root object
-   sensorroot = new Object();
-   sensorroot.sensordatavalue = data;
+     // *****************
+     // Build data your own datastructure
+     // -> create json root object
+     sensorroot = new Object();
+     sensorroot.sensordatavalue = data;
 
-   // *****************
-   // Set your data as the payload,
-   // which will be used in the next node as input.
-   msg.payload = sensorroot;
+     // *****************
+     // Set your data as the payload,
+     // which will be used in the next node as input.
+    msg1.payload = sensorroot;
+  } // if check if there is any valid sensor data
 } else {
-    msg.payload = "No IoT Data Input";
+    msg2.payload = "No valid Sensor IoT Data Input";
+
 }// if else msg != null end
 
-return msg;
+return [msg1,msg2];
