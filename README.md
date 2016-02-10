@@ -40,8 +40,14 @@ These tasks are
   2. Instantiate the **IoT Foundation Starter** (https://console.ng.bluemix.net/catalog/starters/internet-of-things-foundation-starter/)
   3. Give it a name **<<your app name>>**
   4. After your application is running – click **ADD A SERVICE OR API**
-  5. Select **Internet of Things Foundation** from the Catalog
-  6. If the service is running click on the Service in your Bluemix application
+  5. Select Text to Speech from the Catalog
+  6. Search for entering “Text to “ in the Search field and click the icon
+  7. Create your Text To Speech service instance
+  8. Click CREATE
+  9. Restage the application
+ 10. After your application is running – click **ADD A SERVICE OR API**
+ 11. Select **Internet of Things Foundation** from the Catalog
+ 12. If the service is running click on the **Internet of Things Foundation** Service in your Bluemix application
 
 ***
 ### 2.1.2 Configure the Internet of Things Foundation Service
@@ -103,13 +109,40 @@ After the creation of the Type you create a concrete Device this information is 
 
   _NOTE: Now you have prepared your IoT Cloud with your own Device Type and Device with a ID and Security Validation information._
 
+### 2.1.5 CloudantDB setup
+
+    1. In your Bluemix Appliction, click the Cloudant service from your application
+    2. Open the dashboard of your Cloudant service by clicking LAUNCH
+    3. Click Create Database
+    4. Create a new database named “my_demo_iot_db” This will simplify your usage of the provided code
+    5. Create new Search Index  - use the documentation in ..\TempTracker_IoTBluemixMFPSample-master\tempTrackCloudantConfiguration or (http://bit.ly/1TnfJFv) to do that
+
 ***
-### 2.1.5 Node-RED Configuration
+### 2.1.6 Node-RED Configuration
 
   1. On Bluemix, go to your application and click on the url to open your Node-RED
   2. Delete the content of the default created sheet by selecting all and DEL
   3. Copy the ClipboardNodeRed-containsAllNodes.txt content into the Clipboard Either you have it cloned with git or you can get it from git.hub here:(http://bit.ly/20bqIC8)
   4. Import from Clipboard
+  5. Make changes in yours in the lines marked with CHANGE as comment in code.
+  * NODE NAME: "_**(Show Geo WebSite with Sensor Cloudant Data)**_"
+
+   `<!-- *****     CHANGES  ***** -->`
+   `<!-- Insert YOUR BLUEMIX URL  -->`
+   `<div id="header">`
+   `<p>Hello this is the Cloudant Sensor Geo Data Site ... </p> <a href="http://YOUR BLUEMIX URL/cloudant">Go to Senosor Data Page</a>`
+   `</div>`
+
+  * NODE NAME: "_**(Show Sensor Cloudant Data on WebSite)**_"
+
+   `<!-- *****     CHANGES  ***** -->`
+   `<!-- Insert YOUR BLUEMIX URL  -->`
+   `<div id="header">`
+   `<p>Hello this is the Cloudant Sensor Data Site ... </p> <a href="http://YOUR BLUEMIX URLt/map">Go to Senosor Data Page</a>`
+   `</div>`
+  6. Change the Text2Speech node to match your Text2Speech service
+  7. Change the url in http response for audio, map and cloudant nodes to match your nodeRed http address
+
 
 ***
 ### 2.2 iOS related tasks
@@ -131,7 +164,7 @@ After the creation of the Type you create a concrete Device this information is 
   4. Optional: If you have defined own values you must change **deviceID** and **authToken** in _LoginViewController.m_ in operations _viewWillAppear_ and _viewDidLoad_
 
   5. Run the project on a real iOS iPhone or in the iOS Simulator
-  6. When you press send message Fake sensor data, will be send to you IoT cloud.
+  6. When you press **send Message** _Fake_ sensor data, will be send to your IoT cloud.
 
 ***
 # 3. Source Folder content description

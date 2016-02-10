@@ -1,0 +1,77 @@
+
+
+
+Cloundant Database Configurations
+================================
+For understanding background take a look here:
+https://developer.ibm.com/answers/questions/208950/node-red-cloudant-search-index-configuration-retur.html#answer-248075
+
+a) Names:
+=========
+
+1. Launch your cloudant database
+2. Select you **my_demo_iot_db** database
+3. Press the **+** Button behind _All Design Doc_
+4. Select _Add SearchIndex_
+
+Name inside the new DesignDocument:
+   DesignDocumentName: _d_search
+   IndexName:          _inx_all
+
+b) searchIndexFunction Implementation:
+==================================
+
+function(doc)
+{
+  index("default", doc._id);
+  if(doc.sensordatavalue.comment){
+    index("theComment", doc.sensordatavalue.comment, {"store": true, "facet":true});
+  }
+  if(doc.sensordatavalue.date){
+    index("theDate", doc.sensordatavalue.date, {"store": true, "facet":true});
+  }
+  if(doc.sensordatavalue.deviceId){
+    index("theDeviceId", doc.sensordatavalue.deviceId, {"store": true, "facet":true});
+  }
+  if(doc.sensordatavalue.deviceImageURI){
+    index("theDeviceImageURI", doc.sensordatavalue.deviceImageURI, {"store": true, "facet":true});
+  }
+  if(doc.sensordatavalue.deviceType){
+    index("theDeviceType", doc.sensordatavalue.deviceType, {"store": true, "facet":true});
+  }
+  if(doc.sensordatavalue.gtfs_latitude){
+    index("theGtfs_latitude", doc.sensordatavalue.gtfs_latitude, {"store": true, "facet":true});
+  }
+  if(doc.sensordatavalue.gtfs_longitude){
+    index("theGtfs_longitude", doc.sensordatavalue.gtfs_longitude, {"store": true, "facet":true});
+  }
+/* ++++   not now for index +++++++
+  if(doc.sensordatavalue.image){
+    index("theImagee", doc.sensordatavalue.image, {"store": true, "facet":true});
+  }
+*/
+  if(doc.sensordatavalue.imageLocalURI){
+    index("theImageLocalURI", doc.sensordatavalue.imageLocalURI, {"store": true, "facet":true});
+  }
+  if(doc.sensordatavalue.irtemp){
+    index("theIrtemp", doc.sensordatavalue.irtemp, {"store": true, "facet":true});
+  }
+  if(doc.sensordatavalue.message){
+    index("theMessage", doc.sensordatavalue.message, {"store": true, "facet":true});
+  }
+ if(doc.sensordatavalue.optical){
+    index("theOptical", doc.sensordatavalue.optical, {"store": true, "facet":true});
+  }
+  if(doc.sensordatavalue.sensorImage){
+    index("theSensorImage", doc.sensordatavalue.sensorImage, {"store": true, "facet":true});
+  }
+  if(doc.sensordatavalue.status){
+    index("theStatus", doc.sensordatavalue.status, {"store": true, "facet":true});
+  }
+  if(doc.sensordatavalue.temp){
+    index("theTemp", doc.sensordatavalue.temp, {"store": true, "facet":true});
+  }
+  if(doc.sensordatavalue.time){
+    index("theTime", doc.sensordatavalue.time, {"store": true, "facet":true});
+  }
+}
