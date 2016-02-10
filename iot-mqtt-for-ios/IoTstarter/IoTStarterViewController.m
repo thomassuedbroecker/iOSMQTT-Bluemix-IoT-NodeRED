@@ -135,7 +135,9 @@
  * ------------------------
  *************************************************************************/
 
-// Custom Random Number
+// ------------------------------------------
+// Custom Random Number for Sensor Fake Data
+// ------------------------------------------
 -(int)getRandomNumberBetween:(int)from to:(int)to {
     
     return (int)from + arc4random() % (to-from+1);
@@ -153,16 +155,18 @@ clickedButtonAtIndex:(NSInteger)buttonIndex
     
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     
-    // ----------------------------
+    // -----------------------------
     // Concrete Send Message to IoT
     // -----------------------------
     NSString *messageData = [MessageFactory createTextMessage:[alertView textFieldAtIndex:0].text];
     NSLog(@"-->> ViewHandler -->> Message data: %@", messageData);
+    
+    
     // ----------------------------
-    // Custom Send Message to IoT
-    // -----------------------------
-    
-    
+    // Custom Send Message to IoT:
+    // ==========================
+    // Sending the building and sending the Fake data to IoT Cloud
+    //
     for (int i = 1; i <= 10; i++)
     {
         // 01. Wait sending the fake sensor data

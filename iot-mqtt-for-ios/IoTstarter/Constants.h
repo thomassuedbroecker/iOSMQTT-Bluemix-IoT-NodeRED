@@ -121,7 +121,7 @@ extern NSString * const JSON_BUTTON_B;
 extern NSString * const JSON_BUTTON_X;
 extern NSString * const JSON_BUTTON_Y;
 
-// Custom IoT Strings
+// Custom IoT Fake Sensor Strings
 extern NSString * const JSON_SENSORDATAVALUE;
 extern NSString * const JSON_TEMP;
 extern NSString * const JSON_AM_TEMP;

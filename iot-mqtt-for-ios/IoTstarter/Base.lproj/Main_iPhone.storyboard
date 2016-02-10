@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="EBg-fi-8g8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="EBg-fi-8g8">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
         <!--Tab Bar Controller-->
@@ -46,7 +46,7 @@
                                         <rect key="frame" x="0.0" y="22" width="259" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8bB-Sx-zRV" id="1OY-cs-iT0">
-                                            <rect key="frame" x="0.0" y="0.0" width="259" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="259" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.30653935189999998" green="0.31004050929999999" blue="0.3148726852" alpha="1" colorSpace="calibratedRGB"/>
@@ -67,7 +67,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NmN-gd-4ir">
-                                <rect key="frame" x="0.0" y="58" width="30" height="372.5"/>
+                                <rect key="frame" x="0.0" y="58" width="30" height="373"/>
                                 <color key="backgroundColor" red="0.30653935189999998" green="0.31004050929999999" blue="0.3148726852" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" image="ic_chevron-left.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -308,7 +308,7 @@
                                         <rect key="frame" x="0.0" y="22" width="288" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0vO-2G-Zy8" id="iU1-Iz-GUX">
-                                            <rect key="frame" x="0.0" y="0.0" width="288" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="288" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <color key="backgroundColor" red="0.30653935189999998" green="0.31004050929999999" blue="0.3148726852" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>

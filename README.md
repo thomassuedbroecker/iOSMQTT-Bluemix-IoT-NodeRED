@@ -114,13 +114,32 @@ After the creation of the Type you create a concrete Device this information is 
 ***
 ### 2.2 iOS related tasks
 
+  1. On the xCode Project in **_iOSMQTT-Bluemix-IoT-NodeRED/iot-mqtt-for-ios/IoTstarter.xcodeproj_**
+
+  2. Relevant classes which are different to the _ios-starter-for-ios project_
+
+     * IoTStarterViewController.m
+     * LoginViewController.m
+     * MessageFactory.h
+     * MessageFactory.m
+     * Constants.h
+     * Constants.m
+     * Main_iPHone.storyboard (changed)
+
+  3. Change in LoginViewController.m the values of **organization** in operations _viewWillAppear_ and _viewDidLoad_
+
+  4. Optional: If you have defined own values you must change **deviceID** and **authToken** in _LoginViewController.m_ in operations _viewWillAppear_ and _viewDidLoad_
+
+  5. Run the project on a real iOS iPhone or in the iOS Simulator
+  6. When you press send message Fake sensor data, will be send to you IoT cloud. 
+
 ***
 # 3. Source Folder content description
 
 ***
 ## 3.1 Basic UML Documentation
 
-* _****iOSMQTT-Bluemix-IoT-NodeRED/iot-mqtt-for-ios-Documentation**_
+* _**iOSMQTT-Bluemix-IoT-NodeRED/iot-mqtt-for-ios-Documentation**_
 
 This folder contains a basic documentation with a UML Model including some diagrams.
 

@@ -97,7 +97,7 @@
 
 // ----------------------
 // Build Message for IoT
-// Custom build message
+// Build custom sensor Fake message
 // ----------------------
 + (NSString *)createFakeSensorMessage:(NSString *)temp :(NSString *)light :(NSString *)am_temp
 {
