@@ -192,7 +192,7 @@ The file _ClipboardNodeRed-containsAllNodes.txt_ includes the the whole **Node-R
 The other folders _"templates and functions"_ do contain the "pure" code for some nodes. Just to provide a **more readable** format for you.
 
 ***
-## 3.3 Bluemix - Coudant configuration
+## 3.3 Bluemix - Cloudant configuration
 
 * _**iOSMQTT-Bluemix-IoT-NodeRED/iot-mqtt-for-ios-CloudantConfiguration**_
 
