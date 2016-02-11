@@ -23,7 +23,7 @@ The objective is to help to understand how the integration technical works betwe
 ***
 ## 2. Setup the "Just a Fake" sample
 
-This is defined in the Bluemix related tasks and iOS related tasks.
+This is the description of **Bluemix** related tasks and **iOS** related tasks.
 
 ***
 ## 2.1 Bluemix related tasks
