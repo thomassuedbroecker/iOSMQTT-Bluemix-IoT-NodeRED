@@ -1,8 +1,15 @@
-var count = msg.payload.length;
+var msg1 = { payload:"undefined"};
+var msg2 = { payload:"undefined"};
 
-var list = [];
-for (i=0;i<count;i++) {
-list.push({
+// Check valid payload
+if ((msg.payload.length !== undefined)&&
+    (msg.payload[0].sensordatavalue.message!==undefined))
+{ var count = msg.payload.length;
+  var list1 = [];
+
+  // Create search result list
+  for (i=0;i<count;i++) {
+       list1.push({
         _id: msg.payload[i]._id,
         _rev: msg.payload[i]._rev,
         message: msg.payload[i].sensordatavalue.message,
@@ -19,11 +26,12 @@ list.push({
         image: msg.payload[i].sensordatavalue.image,
         imageLocalURL: msg.payload[i].sensordatavalue.imageLocalURL,
         comment : msg.payload[i].sensordatavalue.comment
-    });
+      });
+   }
+   msg1.payload = {
+                    "docs":
+                    list1
+                  }
 }
 
-msg.payload = {
-                "docs":
-                list
-               }
-return msg;
+return [msg1, msg2];

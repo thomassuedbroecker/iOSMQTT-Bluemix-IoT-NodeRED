@@ -1,0 +1,138 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+        <title>Simple Display</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
+</head>
+<script type="text/javascript">
+        // Reuse and customization of the BLOG http://tech.scargill.net/a-node-red-websockets-web-page/
+        // Using http://stackoverflow.com/questions/5881033/how-to-generate-ul-li-list-from-string-array-using-jquery
+        // Init
+        var socketNameOut = "testing";
+        var socketNameIn  = "testingin";
+        var loc = window.location;
+        var newUriIn = "";
+        var newUri = "";
+
+        if (loc.protocol === "https:") {
+            newUri = "wss:";
+            newUriIn = "wss:";
+        } else {
+            newUri = "ws:";
+            newUriIn = "ws:";
+        }
+        newUri += "//" + loc.host + "/ws/" + socketNameOut;
+        newUriIn += "//" + loc.host + "/ws/" + socketNameIn;
+        var topics = {};
+
+        // Connect to socket and get message
+        function wsConnectC() {
+            console.log("connect to: ",newUri);
+            var socket_get = new WebSocket(newUri);
+            console.log("socket_get", socket_get);
+
+            socket_get.onopen = function() {
+                $("#status").html("connected");
+                console.log("socket_get-connected");
+            }
+
+            socket_get.onmessage = function(msg) {
+                var line = "";
+                console.log(msg.data);
+
+                // Clear List
+                $('.DivSai').empty();
+                // Get sensorData for the socket
+                var sensorData = JSON.parse(msg.data);
+                var sensors = sensorData.docs;
+
+                // Build list
+                var ObjUl = $('<ul></ul>');
+                for(var i = 0; i < sensors.length; i++) {
+        			    var sensor = sensors[i];
+                  var Objli = $('<li></li>');
+                  var Obja = $('<a></a>');
+
+                  ObjUl.addClass("ui-menu-item");
+                  ObjUl.attr("role", "menuitem");
+
+                  Obja.addClass("ui-all");
+                  Obja.attr("tabindex", "-1");
+
+                  Obja.text(sensor.message);
+                  Objli.append(Obja);
+
+                  ObjUl.append(Objli);
+                }
+                $('.DivSai').append(ObjUl);
+            }
+
+            socket_get.onerror = function(){
+                console.log("socket_get-error");
+            };
+
+            socket_get.onclose = function() {
+                $("#status").html("not connected");
+                console.log("socket_get not connected");
+            }
+        }
+
+        // Send message to socket
+        function sendMessage(){
+           // send message back to page in simple JSON format
+           // example {“part1”:”Hello”,”part2”:”50”}
+           //var toPage='{"payload":"'+$("#txtMsg_1").val()+'"}';
+           //var searchExp = '"{ "cloudant" : { "searchExp" : "'+$("#txtMsg_1").val()+'" }}"';
+           var searchExp = $("#txtMsg_1").val();
+           var socket_send = new WebSocket(newUriIn);
+           console.log("newUriIn", newUriIn);
+           console.log("socket_send", socket_send);
+
+           socket_send.onopen = function() {
+               $("#status").html("connected");
+               console.log("socket_send-connected");
+               // https://developer.mozilla.org/en-US/docs/Web/API/WebSocket#Ready_state_constants
+               if (socket_send.readyState === 1) {
+                  socket_send.send(searchExp);
+                  console.log("socket_send.send", searchExp);
+               }
+           }
+
+           socket_send.onerror = function(){
+               console.log("socket_send-error");
+
+           };
+
+           socket_send.onclose = function() {
+               $("#status").html("not connected");
+               console.log("Socket_send not connected");
+           }
+        } // end sendMessage
+</script>
+
+<body onload="wsConnectC();" onunload="socket_get.disconnect;">
+<div data-role="page" id="one">
+        <div data-role="header">
+            <h1>Websockets Test Page</h1>
+        </div>
+        <div role="main" class="ui-content">
+            <h1>Temperature Display</h1>
+            <div id="status">status unknown</div>
+            <input id="txtMsg_1" />
+            <div id="part1">!Empty!</div>
+            <hr/>
+            <div id="part2">0</div>
+            <hr/>
+            <label for="slider_1">Input slider:</label>
+            <input type="range" id="slider_1" value="60" min="0" max="100"  />
+            <input type="button" value="Update" onClick="sendMessage()" />
+            <input type="button" value="Load" onClick="wsConnectC()" />
+            <div class="DivSai" ></div>
+        </div>
+    </div>
+    </body>
+</html>

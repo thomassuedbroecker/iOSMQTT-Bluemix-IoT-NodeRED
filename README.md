@@ -94,8 +94,7 @@ After the creation of the Type you create a concrete Device this information is 
    NOTE: Code in **LoginViewController.m**
 
        ` (void)viewDidLoad
-        {
-        [super viewDidLoad];
+        { [super viewDidLoad];
         // Do any additional setup after loading the view.
         self.authTokenField.secureTextEntry = YES;
         AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
