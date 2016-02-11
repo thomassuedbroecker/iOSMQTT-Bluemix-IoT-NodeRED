@@ -93,9 +93,9 @@ After the creation of the Type you create a concrete Device this information is 
 
    NOTE: Code in **LoginViewController.m**
 
-      ` (void)viewDidLoad
-       {
-       [super viewDidLoad];
+       ` (void)viewDidLoad
+        {
+        [super viewDidLoad];
         // Do any additional setup after loading the view.
         self.authTokenField.secureTextEntry = YES;
         AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
@@ -105,7 +105,7 @@ After the creation of the Type you create a concrete Device this information is 
         appDelegate.deviceID;
         self.authTokenField.text = @"MyIoT2016";
         appDelegate.authToken;
-       } `
+        } `
 
   _NOTE: Now you have prepared your IoT Cloud with your own Device Type and Device with a ID and Security Validation information._
 
@@ -127,19 +127,20 @@ After the creation of the Type you create a concrete Device this information is 
   5. Make changes in yours in the lines marked with CHANGE as comment in code.
   * NODE NAME: "_**(Show Geo WebSite with Sensor Cloudant Data)**_"
 
-    `<!-- *****     CHANGES  ***** -->`
-    `<!-- Insert YOUR BLUEMIX URL  -->`
-    `<div id="header">`
-    `<p>Hello this is the Cloudant Sensor Geo Data Site ... </p> <a href="http://YOUR BLUEMIX URL/cloudant">Go to Senosor Data Page</a>`
-    `</div>`
+      ` <!-- *****     CHANGES  ***** -->
+        <!-- Insert YOUR BLUEMIX URL  -->
+        <div id="header">
+        <p>Hello this is the Cloudant Sensor Geo Data Site ... </p> <a href="YOUR BLUEMIX URL/cloudant">Go to Senosor Data Page</a>
+        </div> `
 
   * NODE NAME: "_**(Show Sensor Cloudant Data on WebSite)**_"
 
-    `<!-- *****     CHANGES  ***** -->`
-    `<!-- Insert YOUR BLUEMIX URL  -->`
-    `<div id="header">`
-    `<p>Hello this is the Cloudant Sensor Data Site ... </p> <a href="http://YOUR BLUEMIX URLt/map">Go to Senosor Data Page</a>`
-    `</div>`
+      ` <!-- *****     CHANGES  ***** -->
+        <!-- Insert YOUR BLUEMIX URL  -->
+        <div id="header">
+        <p>Hello this is the Cloudant Sensor Data Site ... </p> <a href="YOUR BLUEMIX URLt/map">Go to Senosor Data Page</a>
+        </div> `
+
   6. Change the Text2Speech node to match your Text2Speech service
   7. Change the url in **http response Node** for _audio_, _map_ and _cloudant_ nodes to match your nodeRed http address. _NOTE:_ This is for you that you can easily copy and past the URL later in your browser.
 
