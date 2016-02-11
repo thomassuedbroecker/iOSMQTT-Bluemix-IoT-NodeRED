@@ -50,13 +50,13 @@ These tasks are
  12. If the service is running click on the **Internet of Things Foundation** Service in your Bluemix application
 
 ***
-### 2.1.2 Configure the Internet of Things Foundation Service
+### 2.1.2 Configure the _Internet of Things Foundation Service_
 
 Now you have to define a DeviceType. This device type information, will be used be the iOS app to connect to the right device in the cloud.
 After the creation of the Type you create a concrete Device this information is also used Hardcoded in iOS app.
 
 ***
-### 2.1.3 Define DeviceType for the Internet of Things Foundation Service
+#### 2.1.2.1 Define DeviceType for the _Internet of Things Foundation Service_
 
   1. Click under **Connect your devices** on the Button **Launch Dashboard**
   2. On the Dashboard you can see or **"Organization ID: XXXX"**
@@ -80,7 +80,7 @@ After the creation of the Type you create a concrete Device this information is 
   9. Not insert any _Optional_ Metadata and click **Create**.
 
 ***
-### 2.1.4 Define Device for the Internet of Things Foundation Service
+#### 2.1.2.2 Define Device for the Internet of Things Foundation Service
 
    1. Click on **Device** at the tabs on the Dashboard
    2. Press Button **Add Device**
@@ -109,7 +109,7 @@ After the creation of the Type you create a concrete Device this information is 
 
   _NOTE: Now you have prepared your IoT Cloud with your own Device Type and Device with a ID and Security Validation information._
 
-### 2.1.5 CloudantDB setup
+### 2.1.3 CloudantDB setup
 
   1. In your Bluemix Appliction, click the Cloudant service from your application
   2. Open the dashboard of your Cloudant service by clicking LAUNCH
@@ -118,7 +118,7 @@ After the creation of the Type you create a concrete Device this information is 
   5. Create new Search Index  - use the documentation in ..\TempTracker_IoTBluemixMFPSample-master\tempTrackCloudantConfiguration or (http://bit.ly/1TnfJFv) to do that
 
 ***
-### 2.1.6 Node-RED Configuration
+### 2.1.4 Node-RED Configuration
 
   1. On Bluemix, go to your application and click on the url to open your Node-RED
   2. Delete the content of the default created sheet by selecting all and DEL
