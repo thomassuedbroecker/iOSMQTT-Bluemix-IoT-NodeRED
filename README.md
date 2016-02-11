@@ -93,29 +93,29 @@ After the creation of the Type you create a concrete Device this information is 
 
    NOTE: Code in **LoginViewController.m**
 
-      `(void)viewDidLoad
-      {
-      [super viewDidLoad];
-       // Do any additional setup after loading the view.
-       self.authTokenField.secureTextEntry = YES;
-       AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-       self.organizationField.text = @"ff6cyz";
-       appDelegate.organization;
-       self.deviceIDField.text  = @"123456789";
-       appDelegate.deviceID;
-       self.authTokenField.text = @"MyIoT2016";
-       appDelegate.authToken;
-      } `
+      ` (void)viewDidLoad
+       {
+       [super viewDidLoad];
+        // Do any additional setup after loading the view.
+        self.authTokenField.secureTextEntry = YES;
+        AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+        self.organizationField.text = @"ff6cyz";
+        appDelegate.organization;
+        self.deviceIDField.text  = @"123456789";
+        appDelegate.deviceID;
+        self.authTokenField.text = @"MyIoT2016";
+        appDelegate.authToken;
+       } `
 
   _NOTE: Now you have prepared your IoT Cloud with your own Device Type and Device with a ID and Security Validation information._
 
 ### 2.1.5 CloudantDB setup
 
-    1. In your Bluemix Appliction, click the Cloudant service from your application
-    2. Open the dashboard of your Cloudant service by clicking LAUNCH
-    3. Click Create Database
-    4. Create a new database named “my_demo_iot_db” This will simplify your usage of the provided code
-    5. Create new Search Index  - use the documentation in ..\TempTracker_IoTBluemixMFPSample-master\tempTrackCloudantConfiguration or (http://bit.ly/1TnfJFv) to do that
+  1. In your Bluemix Appliction, click the Cloudant service from your application
+  2. Open the dashboard of your Cloudant service by clicking LAUNCH
+  3. Click Create Database
+  4. Create a new database named “my_demo_iot_db” This will simplify your usage of the provided code
+  5. Create new Search Index  - use the documentation in ..\TempTracker_IoTBluemixMFPSample-master\tempTrackCloudantConfiguration or (http://bit.ly/1TnfJFv) to do that
 
 ***
 ### 2.1.6 Node-RED Configuration
@@ -127,22 +127,21 @@ After the creation of the Type you create a concrete Device this information is 
   5. Make changes in yours in the lines marked with CHANGE as comment in code.
   * NODE NAME: "_**(Show Geo WebSite with Sensor Cloudant Data)**_"
 
-   `<!-- *****     CHANGES  ***** -->`
-   `<!-- Insert YOUR BLUEMIX URL  -->`
-   `<div id="header">`
-   `<p>Hello this is the Cloudant Sensor Geo Data Site ... </p> <a href="http://YOUR BLUEMIX URL/cloudant">Go to Senosor Data Page</a>`
-   `</div>`
+    `<!-- *****     CHANGES  ***** -->`
+    `<!-- Insert YOUR BLUEMIX URL  -->`
+    `<div id="header">`
+    `<p>Hello this is the Cloudant Sensor Geo Data Site ... </p> <a href="http://YOUR BLUEMIX URL/cloudant">Go to Senosor Data Page</a>`
+    `</div>`
 
   * NODE NAME: "_**(Show Sensor Cloudant Data on WebSite)**_"
 
-   `<!-- *****     CHANGES  ***** -->`
-   `<!-- Insert YOUR BLUEMIX URL  -->`
-   `<div id="header">`
-   `<p>Hello this is the Cloudant Sensor Data Site ... </p> <a href="http://YOUR BLUEMIX URLt/map">Go to Senosor Data Page</a>`
-   `</div>`
+    `<!-- *****     CHANGES  ***** -->`
+    `<!-- Insert YOUR BLUEMIX URL  -->`
+    `<div id="header">`
+    `<p>Hello this is the Cloudant Sensor Data Site ... </p> <a href="http://YOUR BLUEMIX URLt/map">Go to Senosor Data Page</a>`
+    `</div>`
   6. Change the Text2Speech node to match your Text2Speech service
-  7. Change the url in http response for audio, map and cloudant nodes to match your nodeRed http address
-
+  7. Change the url in **http response Node** for _audio_, _map_ and _cloudant_ nodes to match your nodeRed http address. _NOTE:_ This is for you that you can easily copy and past the URL later in your browser.
 
 ***
 ### 2.2 iOS related tasks
@@ -150,7 +149,7 @@ After the creation of the Type you create a concrete Device this information is 
 These tasks are
   * Configure xCode Project
   * Run the the sample App
-  
+
 ***
 ### 2.2.1  Setup the xCode Project
   1. Open the xCode Project in **_iOSMQTT-Bluemix-IoT-NodeRED/iot-mqtt-for-ios/IoTstarter.xcodeproj_**
