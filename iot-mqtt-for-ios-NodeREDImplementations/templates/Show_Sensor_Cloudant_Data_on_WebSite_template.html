@@ -30,6 +30,9 @@
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
     <title>Extract Cloudant Data</title>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
     <script type="text/javascript">
 		function initialize() {
       // Use browser URL to define socket URL
@@ -49,99 +52,85 @@
 		  var output = document.getElementById('output');
       var sock = new WebSocket(newUri);
 
+      // *******************************************************
 		  sock.onopen = function(){
 		    //$('#output').text('Waiting for cloudant data ...');
-		    console.log("Connected websocket");
+        document.getElementById("output").innerHTML = 'Waiting for cloudant data ...';
+        console.log("Connected websocket");
 		    console.log("Sending ping..");
 			  sock.send("Ping!");
 		    console.log("Ping sended..");
 		  };
 
+      // *******************************************************
 		  sock.onerror = function(){
 		      document.write("<p>Problem Error!!</p>");
 		      console.log("Websocket error");
+          document.getElementById("output").innerHTML = 'ERROR';
 
 		  };
 
-		  sock.onmessage = function(evt){
-        message = "Getting sensor data: " + messageCount;
-        messageCount++;
-		    console.log(message);
+      // *******************************************************
+		  sock.onmessage = function(msg){
+          // Set the sensor data request count on HTML
+          messageCount++;
+          message = "Getting sensor data: " + messageCount;
+          document.getElementById("count").innerHTML =message;
+          console.log(message);
+          document.getElementById("output").innerHTML = 'Connected';
 
-        // ************************************************
-        // Create HTML-Page BEGIN
-		      document.write("<style>body{background-color: linen;}h1{color: maroon;margin-left: 40px;}table, th, td {border: 1px solid black;}</style>");
-		      document.write("<p>Cloudant Sensor Data are available!</p>");
-		      document.write("<p>***************************</p>");
-		      // document.write(evt.data);
-		      // document.write("<p>***************************</p>");
-
+          $('.SensorResultTable').empty();
           // Get sensorData for the socket
-          var sensorData = JSON.parse(evt.data);
-
-          document.write("<p>Show Table</p>");
-		      document.write("<a href="+sensorGeoPage+">Go to Senosor Geo Page</a>");
-		      document.write("<p>***************************</p>");
-
-          // Build table
-		        var myTable= "<table>";
-		        myTable+="<tr>";
-		        myTable+="<td style='width: auto; color: black; text-align: center;'>Count</td>";
-            myTable+="<td style='width: auto; color: black; text-align: center;'>Message</td>";
-            myTable+="<td style='width: auto; color: black; text-align: center;'>Temperature</td>";
-            myTable+="<td style='width: auto; color: black; text-align: center;'>DeviceId</td>";
-            myTable+="<td style='width: auto; color: black; text-align: center;'>DeviceType</td>";
-            myTable+="<td style='width: auto; color: black; text-align: center;'>GeoLocation</td>";
-            myTable+="<td style='width: auto; color: black; text-align: center;'>Date and Time</td>";
-            myTable+="<td style='width: auto; color: black; text-align: center;'>Status</td>";
-            myTable+="<td style='width: auto; color: black; text-align: center;'>Image</td>";
-            myTable+="<td style='width: auto; color: black; text-align: center;'>Comment</td>";
-            myTable+="</tr>";
-            //myTable+="<tr><td style='width: 100px;                   '>---------------</td>";
-            //myTable+="<td     style='width: 100px; text-align: right;'>---------------</td>";
-            //myTable+="<td     style='width: 100px; text-align: right;'>---------------</td></tr>";
-
-          // get datalist
+          var sensorData = JSON.parse(msg.data);
           var sensors = sensorData.docs;
+          var resultcount = sensors.length;
 
-          // create table rows
+          // Build list and Table
+          // http://www.w3schools.com/jquerymobile/tryit.asp?filename=tryjqmob_tables_columntoggle
+          var ObjTable = $('<table data-role="table" data-mode="columntoggle" class="ui-responsive" id="myTable">');
+          // Create Header for Table
+          // ObjTable.append('<caption>Result of Sensor Data Search</caption>');
+          // Create columns
+          ObjTable.append('<thead><th data-priority="1">DeviceID</th><th data-priority="2">Temperature</th><th data-priority="3">Status</th><th>Message</th></thead>');
+          ObjTable.append('<tbody>');
           for(var i = 0; i < sensors.length; i++) {
-  			   var sensor = sensors[i];
-  			   //output = document.write("<p>"+ sensor + "</p>");
-  			   myTable+="<tr>";
-  			   myTable+="<td style='width: auto; color: blue; text-align: left;'>(" + i + ")</td>";
-                myTable+="<td style='width: auto; color: blue; text-align: left;'>" + sensor.message + "</td>";
-                myTable+="<td style='width: auto; color: blue; text-align: left;'>" + sensor.temp + "</td>";
-                myTable+="<td style='width: auto; color: blue; text-align: left;'>" + sensor.deviceId + "</td>";
-                myTable+="<td style='width: auto; color: blue; text-align: left;'>" + sensor.deviceType + "</td>";
-                myTable+="<td style='width: auto; color: blue; text-align: left;'> (" + sensor.gtfs_latitude + "):(" + sensor.gtfs_longitude  + ")</td>";
-                myTable+="<td style='width: auto; color: blue; text-align: left;'> (" + sensor.date + "):(" + sensor.time  + ")</td>";
-                myTable+="<td style='width: auto; color: black; text-align: left;'> <b>" + sensor.status +"</b></td>";
-                myTable+="<td style=''><img width='100' height='100' alt='No Image' src='"+ sensor.image +"'/></td>";
-                myTable+="<td style='width: auto; color: black; text-align: left;'> <b>" + sensor.comment +"</b></td>"
-                myTable+="</tr>";
-  			   }
-           myTable+="</table>";
+            var sensor = sensors[i];
+            //Table
+            ObjTable.append( '<tr><td>' + sensor.deviceId + '</td>' +
+                            '<td>' + sensor.temp + '</td>' +
+                            '<td>' + sensor.status + '</td>' +
+                            '<td>' + sensor.message + '</td></tr>' );
 
-           // Write table in browser
-           document.write( myTable);
-           document.close();
-  		  };
-		 };
+          }
+          ObjTable.append('</tbody>');
+          ObjTable.append('</table>');
+
+          $('.SensorResultTable').append(ObjTable);
+          document.getElementById("output").innerHTML = 'Connected with (' + resultcount + ') sensor data rows';
+
+        } // End onmessage
+		 }; // initialize
      </script>
   </head>
   <body>
     <!-- *****     CHANGES  ***** -->
     <!-- Insert YOUR BLUEMIX URL  -->
     <div id="header">
-      <p>Hello this is the Cloudant Sensor Data Site ... </p> <a href="http://YOUR_BLUEMIX_URL/map">Go to Senosor Data Page</a>
+      <p>Hello this is the Cloudant Sensor data page</p>
+      <a href="http://owniotcloud.mybluemix.net/audio">Go to Senosor voice message page</a>
+      <a href="http://owniotcloud.mybluemix.net/map">Go to Senosor geo-location page</a>
+      <a href="http://owniotcloud.mybluemix.net/testing">Go to Senosor data search page</a>
+      <p id="count"></p>
     </div>
     <div id="output">Connecting to Socket to get the Cloudant Sensor Data...</div>
     <script type="text/javascript">
        initialize();
     </script>
+    <div role="main" class="ui-content">
+        <div class="SensorResultTable" ></div>
+    </div>
     <div id="footer">
-       IoT Bluemix Mobile Sample Page
+       IoT Bluemix Sample Page
     </div>
   </body>
 </html>

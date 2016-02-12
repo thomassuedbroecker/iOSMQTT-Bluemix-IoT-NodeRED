@@ -2,7 +2,33 @@
 <html>
 
 <head>
-        <title>Simple Display</title>
+        <title>Search Sensor Data</title>
+        <style>
+            body {
+            background-color: linen;
+            }
+
+            h1 {
+              color: maroon;
+              margin-left: 40px;
+            }
+            table, th, td {
+              border: 1px solid black;
+            }
+            #header {
+             background-color:black;
+             color:white;
+             text-align:center;
+             padding:5px;
+            }
+            #footer {
+             background-color:black;
+             color:white;
+             clear:both;
+             text-align:center;
+             padding:5px;
+            }
+        </style>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -44,31 +70,53 @@
                 var line = "";
                 console.log(msg.data);
 
-                // Clear List
-                $('.DivSai').empty();
+                // Clear List and Table
+                $('.SensorResultList').empty();
+                $('.SensorResultTable').empty();
+
                 // Get sensorData for the socket
                 var sensorData = JSON.parse(msg.data);
                 var sensors = sensorData.docs;
+                var resultcount = sensors.length;
+                $("#resultcount").html(resultcount);
+                $("#status").html("not connected");
 
-                // Build list
+                // Build list and Table
                 var ObjUl = $('<ul></ul>');
+                // http://www.w3schools.com/jquerymobile/tryit.asp?filename=tryjqmob_tables_columntoggle
+                var ObjTable = $('<table data-role="table" data-mode="columntoggle" class="ui-responsive" id="myTable">');
+                // Create Header for Table
+                // ObjTable.append('<caption>Result of Sensor Data Search</caption>');
+                // Create columns
+                ObjTable.append('<thead><th data-priority="1">DeviceID</th><th data-priority="2">Temperature</th><th data-priority="3">Status</th><th>Message</th></thead>');
+                ObjTable.append('<tbody>');
                 for(var i = 0; i < sensors.length; i++) {
         			    var sensor = sensors[i];
+
+                  //List
                   var Objli = $('<li></li>');
                   var Obja = $('<a></a>');
 
                   ObjUl.addClass("ui-menu-item");
                   ObjUl.attr("role", "menuitem");
-
                   Obja.addClass("ui-all");
                   Obja.attr("tabindex", "-1");
-
                   Obja.text(sensor.message);
                   Objli.append(Obja);
-
                   ObjUl.append(Objli);
+
+                  //Table
+                  ObjTable.append( '<tr><td>' + sensor.deviceId + '</td>' +
+                                    '<td>' + sensor.temp + '</td>' +
+                                    '<td>' + sensor.status + '</td>' +
+                                    '<td>' + sensor.message + '</td></tr>' );
+
                 }
-                $('.DivSai').append(ObjUl);
+                ObjTable.append('</tbody>');
+                ObjTable.append('</table>');
+
+                $('.SensorResultList').append(ObjUl);
+                $('.SensorResultTable').append(ObjTable);
             }
 
             socket_get.onerror = function(){
@@ -99,6 +147,15 @@
                if (socket_send.readyState === 1) {
                   socket_send.send(searchExp);
                   console.log("socket_send.send", searchExp);
+
+                  // In case the search is not successful the result is emtpy
+                  // Clear List and Table
+                  $('.SensorResultList').empty();
+                  $('.SensorResultTable').empty();
+
+                  // Clear resultcount
+                  var resultcount = 0;
+                  $("#resultcount").html(resultcount);
                }
            }
 
@@ -112,26 +169,44 @@
                console.log("Socket_send not connected");
            }
         } // end sendMessage
+
+        function goToMapURL() {
+          location.href = 'http://owniotcloud.mybluemix.net/map';
+        }
+
+        function goToAllDataURL() {
+          location.href = 'http://owniotcloud.mybluemix.net/cloudant';
+        }
+
+        function goToVoiceMessageURL() {
+          location.href = 'http://owniotcloud.mybluemix.net/audio';
+        }
+
 </script>
 
 <body onload="wsConnectC();" onunload="socket_get.disconnect;">
 <div data-role="page" id="one">
+        <style>body{background-color: linen;}h1{color: maroon;margin-left: 40px;}table, th, td {border: 1px solid black;}</style>
         <div data-role="header">
-            <h1>Websockets Test Page</h1>
+            <h1>Sensor Data Search Page</h1>
         </div>
         <div role="main" class="ui-content">
-            <h1>Temperature Display</h1>
+            <a href="javascript:void(0)" onclick="goToMapURL(); return false;">Go to all Sensor locations</a>
+            <a href="javascript:void(0)" onclick="goToAllDataURL(); return false;">Go to all Sensor data</a>
+            <a href="javascript:void(0)" onclick="goToVoiceMessageURL(); return false;">Go to all Sensor voice messages</a>
+            <hr/>
+            <h1>Search Sensor Data</h1>
             <div id="status">status unknown</div>
             <input id="txtMsg_1" />
-            <div id="part1">!Empty!</div>
             <hr/>
-            <div id="part2">0</div>
+            <div id="resultcount">0</div>
             <hr/>
-            <label for="slider_1">Input slider:</label>
-            <input type="range" id="slider_1" value="60" min="0" max="100"  />
             <input type="button" value="Update" onClick="sendMessage()" />
+            <hr/>
             <input type="button" value="Load" onClick="wsConnectC()" />
-            <div class="DivSai" ></div>
+            <!-- <div class="SensorResultList" ></div> -->
+            <hr/>
+            <div class="SensorResultTable" ></div>
         </div>
     </div>
     </body>

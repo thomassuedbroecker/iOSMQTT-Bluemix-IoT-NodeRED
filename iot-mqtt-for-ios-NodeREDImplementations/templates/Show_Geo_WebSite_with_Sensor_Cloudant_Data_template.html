@@ -71,6 +71,10 @@
 		    var geotitle="";
 
 		    console.log("in 'onmessage'");
+		    console.log("in 'onmessage' setting sensor data size");
+
+		    // Set the sensor count on HTML
+		    document.getElementById("count").innerHTML =sensors.length;;
 
 			for(var i = 0; i < sensors.length; i++) {
 			  var sensor   = sensors[i];
@@ -120,12 +124,16 @@
     <!-- *****     CHANGES  ***** -->
     <!-- Insert YOUR BLUEMIX URL  -->
     <div id="header">
-      <p>Hello this is the Cloudant Sensor Geo Data Site ... </p> <a href="http://YOUR_BLUEMIX_URL/cloudant">Go to Senosor Data Page</a>
+      <p>Hello this is the Cloudant Sensor GeoData Site</p>
+      <a href="http://owniotcloud.mybluemix.net/cloudant">Go to Senosor data page</a>
+      <a href="http://owniotcloud.mybluemix.net/audio">Go to Senosor voice message page</a>
+      <a href="http://owniotcloud.mybluemix.net/testing">Go to Senosor data search page</a>
+      <p id="count"></p>
     </div>
     <div id="output">Connecting to Socket to get the Cloudant Sensor Geo Data...</div>
     <div id="map-canvas"></div>
     <div id="footer">
-       IoT Bluemix Mobile Sample Page
+       IoT Bluemix Sample Page
     </div>
   </body>
 </html>

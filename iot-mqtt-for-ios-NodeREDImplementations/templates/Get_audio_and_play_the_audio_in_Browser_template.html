@@ -1,12 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>IBM Watson - Text To Speech</title>
+  <title>Sensor data voice message using: IBM Watson - Text To Speech</title>
+  <style>
+    html, body, #map-canvas {
+      height: 100%;
+      margin: 0px;
+      padding: 0px
+    }
+    #header {
+      background-color:black;
+      color:white;
+      text-align:center;
+      padding:5px;
+    }
+    #footer {
+      background-color:black;
+      color:white;
+      clear:both;
+      text-align:center;
+      padding:5px;
+    }
+  </style>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
   <script type="text/javascript">
     var socketaddy = "ws://" + window.location.host + "/ws/audio";
-
+    var count = 0;
     $(document).ready(function(){
       var output = document.getElementById('output')
       $('#output').on('playing', function () {
@@ -32,12 +52,22 @@
         console.log("Websocket message", evt);
         output.src = window.URL.createObjectURL(evt.data);
         output.play();
+        count = count + 1;
+        // Set the sensor count on HTML
+		    document.getElementById("count").innerHTML =count;
       };
     });
   </script>
 
 </head>
 <body style="font-size: 56px; font-family: helvetica; text-align: center; margin-top: 100px;">
+  <div id="header">
+    <p>Hello this is the Voice message page</p>
+    <a href="http://owniotcloud.mybluemix.net/cloudant">Go to Senosor data page</a>
+    <a href="http://owniotcloud.mybluemix.net/map">Go to Senosor geo-location page</a>
+    <a href="http://owniotcloud.mybluemix.net/testing">Go to Senosor data search page</a>
+    <p id="count"></p>
+  </div>
   <div id="text">Connecting...</div>
   <audio id="output"></audio>
 </body>
