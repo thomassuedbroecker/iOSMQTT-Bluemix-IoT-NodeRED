@@ -22,14 +22,22 @@ The objective is to help to understand how the integration technical works betwe
 
 ## 2. Available functionality on web pages
 
-  1. Get audio and play the audio in Browser
+  1. _Get audio and play the audio in Browser_
+  
   ![Template Audio Data Page](https://github.com/thomassuedbroecker/iOSMQTT-Bluemix-IoT-NodeRED/blob/master/iot-mqtt-for-ios-Images/template-audio-data-page.jpg)
-  2. Show GeoLocation of Sensor
+
+  2. _Show GeoLocation of Sensor_
+
   ![Template Geo Data Page](https://github.com/thomassuedbroecker/iOSMQTT-Bluemix-IoT-NodeRED/blob/master/iot-mqtt-for-ios-Images/template-geo-data-page.jpg)
-  3. Show Sensor Cloudant and Realtime Data on WebSite
+
+  3. _Show Sensor Cloudant and Realtime Data on WebSite_
+
   ![Template All Data Page](https://github.com/thomassuedbroecker/iOSMQTT-Bluemix-IoT-NodeRED/blob/master/iot-mqtt-for-ios-Images/template-all-data-page.jpg)
-  4. Sensor Data search in CloudantDB
+
+  4. _Sensor Data search in CloudantDB_
+
   ![Template Search Page](https://github.com/thomassuedbroecker/iOSMQTT-Bluemix-IoT-NodeRED/blob/master/iot-mqtt-for-ios-Images/template-search-page.jpg)
+
 
 
 ***
