@@ -33,14 +33,16 @@
           $('#text').text('Playing audio.')
 
       });
+
       $('#output').on('ended', function () {
           $('#text').text('Waiting for audio...')
-
       });
+
       sock = new WebSocket(socketaddy);
       sock.onopen = function(){
           $('#text').text('Waiting for audio...');
           console.log("Connected websocket");
+          document.getElementById("count").innerHTML = "Played audio messages: 0";
       };
       sock.onerror = function(){
           console.log("Websocket error");
@@ -49,12 +51,14 @@
           $('#text').text('Not connected. Refresh the page?')
       }
       sock.onmessage = function(evt){
-        console.log("Websocket message", evt);
+        console.log("Websocket audio message", evt);
         output.src = window.URL.createObjectURL(evt.data);
         output.play();
         count = count + 1;
+        var message = "";
+        message = "Played audio messages: " + count
         // Set the sensor count on HTML
-		    document.getElementById("count").innerHTML =count;
+		    document.getElementById("count").innerHTML = message;
       };
     });
   </script>
