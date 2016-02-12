@@ -136,7 +136,7 @@ After the creation of the Type you create a concrete Device this information is 
       ` <!-- *****     CHANGES  ***** -->
         <!-- Insert YOUR BLUEMIX URL  -->
         <div id="header">
-        <p>Hello this is the Cloudant Sensor Geo Data Site ... </p> <a href="YOUR BLUEMIX URL/cloudant">Go to Senosor Data Page</a>
+        <p>Hello this is the Cloudant Sensor Geo Data Site ... </p> <a href="YOUR BLUEMIX URL/cloudant">Go to Sensor Data Page</a>
         </div> `
 
   * NODE NAME: "_**(Show Sensor Cloudant Data on WebSite)**_"
@@ -144,7 +144,7 @@ After the creation of the Type you create a concrete Device this information is 
       ` <!-- *****     CHANGES  ***** -->
         <!-- Insert YOUR BLUEMIX URL  -->
         <div id="header">
-        <p>Hello this is the Cloudant Sensor Data Site ... </p> <a href="YOUR BLUEMIX URLt/map">Go to Senosor Data Page</a>
+        <p>Hello this is the Cloudant Sensor Data Site ... </p> <a href="YOUR BLUEMIX URLt/map">Go to Sensor Data Page</a>
         </div> `
 
   6. Change the Text2Speech node to match your Text2Speech service
