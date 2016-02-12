@@ -23,9 +23,14 @@ The objective is to help to understand how the integration technical works betwe
 ## 2. Available functionality on web pages
 
   1. Get audio and play the audio in Browser
+  ![Template Audio Data Page](https://github.com/thomassuedbroecker/iOSMQTT-Bluemix-IoT-NodeRED/blob/master/iot-mqtt-for-ios-Images/template-audio-data-page.jpg)
   2. Show GeoLocation of Sensor
-  3. Show Sensor Cloudant and Realtime Data on WebSite     
-  4. Sensor Data search in Cloudant
+  ![Template Geo Data Page](https://github.com/thomassuedbroecker/iOSMQTT-Bluemix-IoT-NodeRED/blob/master/iot-mqtt-for-ios-Images/template-geo-data-page.jpg)
+  3. Show Sensor Cloudant and Realtime Data on WebSite
+  ![Template All Data Page](https://github.com/thomassuedbroecker/iOSMQTT-Bluemix-IoT-NodeRED/blob/master/iot-mqtt-for-ios-Images/template-all-data-page.jpg)
+  4. Sensor Data search in CloudantDB
+  ![Template Search Page](https://github.com/thomassuedbroecker/iOSMQTT-Bluemix-IoT-NodeRED/blob/master/iot-mqtt-for-ios-Images/template-search-page.jpg)
+
 
 ***
 ## 3. Setup the "Just a Fake" sample
@@ -149,7 +154,8 @@ After the creation of the Type you create a concrete Device this information is 
 
   6. Change the Text2Speech node to match your Text2Speech service
   7. Change the url in **http response Node** for _audio_, _map_ and _cloudant_ nodes to match your nodeRed http address. _NOTE:_ This is for you that you can easily copy and past the URL later in your browser.
-  ![Node-RED-Flow](https://github.com/thomassuedbroecker/iOSMQTT-Bluemix-IoT-NodeRED/blob/master/iot-mqtt-for-ios-Images/node-red-flow.jpg) 
+  ![Node-RED-Flow](https://github.com/thomassuedbroecker/iOSMQTT-Bluemix-IoT-NodeRED/blob/master/iot-mqtt-for-ios-Images/node-red-flow.jpg)
+
 ***
 ### 3.2 iOS related tasks
 
