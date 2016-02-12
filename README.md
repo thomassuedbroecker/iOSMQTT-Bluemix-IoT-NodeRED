@@ -20,6 +20,13 @@ The objective is to help to understand how the integration technical works betwe
   2. Using a own IBM IoT Cloud as a Service in Bluemix
   4. Using the in Bluemix Cloundant, IoT Cloud and Watson
 
+## 2. Available functionality on web pages
+
+  1. Get audio and play the audio in Browser
+  2. Show GeoLocation of Sensor
+  3. Show Sensor Cloudant and Realtime Data on WebSite     
+  4. Sensor Data search in Cloudant
+
 ***
 ## 2. Setup the "Just a Fake" sample
 
