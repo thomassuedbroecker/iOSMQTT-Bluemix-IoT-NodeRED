@@ -110,6 +110,82 @@
 
         } // End onmessage
 		 }; // initialize
+
+     function realtime() {
+        // Use browser URL to define socket URL
+        var loc = window.location;
+        var messageCount = 0;
+        if (loc.protocol === "https:") {
+             newUri = "wss:";
+         } else {
+             newUri = "ws:";
+         }
+         newUri += "//" + loc.host + "/ws/realtime";
+
+         var outputrealtime = document.getElementById('outputrealtime');
+         var sock = new WebSocket(newUri);
+
+         // *******************************************************
+         sock.onopen = function(){
+           //$('#output').text('Waiting for cloudant data ...');
+           document.getElementById("outputrealtime").innerHTML = 'Waiting for reatime data ...';
+           console.log("Connected realtime websocket");
+           console.log("Sending ping..");
+           sock.send("Ping!");
+           console.log("Ping sended..");
+         };
+
+         // *******************************************************
+         sock.onerror = function(){
+           document.write("<p>Problem Error!!</p>");
+           console.log("Websocket outputrealtime error");
+           document.getElementById("outputrealtime").innerHTML = 'ERROR';
+         };
+
+         // *******************************************************
+         sock.onmessage = function(msg){
+           // Set the sensor data request count on HTML
+           messageCount++;
+           message = "Getting realtime data: " + messageCount;
+           document.getElementById("countrealtime").innerHTML =message;
+           console.log(message);
+           document.getElementById("outputrealtime").innerHTML = 'Realtime Connected';
+
+           $('.RealtimeResultTable').empty();
+           // Get sensorData for the socket
+           var sensorData = JSON.parse(msg.data);
+           console.log(sensorData);
+
+           // Build list and Table
+           // http://www.w3schools.com/jquerymobile/tryit.asp?filename=tryjqmob_tables_columntoggle
+           var ObjTable = $('<table data-role="table" data-mode="columntoggle" class="ui-responsive" id="myTable">');
+           // Create Header for Table
+           // ObjTable.append('<caption>Result of Sensor Data Search</caption>');
+           // Create columns
+           ObjTable.append('<thead><th data-priority="1">DeviceID</th><th data-priority="2">Temperature</th><th data-priority="3">Status</th><th>Message</th></thead>');
+           ObjTable.append('<tbody>');
+           for(var i = 0; i < 1; i++) {
+             var sensor = sensorData;
+             //Table
+             ObjTable.append( '<tr><td>' + sensor.sensordatavalue.deviceId + '</td>' +
+                             '<td>' + sensor.sensordatavalue.temp + '</td>' +
+                             '<td>' + sensor.sensordatavalue.status + '</td>' +
+                             '<td>' + sensor.sensordatavalue.message + '</td></tr>' );
+
+           }
+           ObjTable.append('</tbody>');
+           ObjTable.append('</table>');
+
+           $('.RealtimeResultTable').append(ObjTable);
+           if (sensor.sensordatavalue.status == "SAFE"){
+             $('.RealtimeResultTable').css('color', 'green');
+           } else {
+             $('.RealtimeResultTable').css('color', 'red');
+           }
+
+           document.getElementById("output").innerHTML = 'Reatime Connected with (1) sensor data rows';
+         } // End onmessage
+     }
      </script>
   </head>
   <body>
@@ -121,12 +197,20 @@
       <a href="http://owniotcloud.mybluemix.net/map">Go to Senosor geo-location page</a>
       <a href="http://owniotcloud.mybluemix.net/testing">Go to Senosor data search page</a>
       <p id="count"></p>
+      <p id="countrealtime"></p>
     </div>
-    <div id="output">Connecting to Socket to get the Cloudant Sensor Data...</div>
-    <script type="text/javascript">
-       initialize();
-    </script>
+    <div id="output">Press button to connect and get the Cloudant Sensor Data.</div>
+    <div id="outputrealtime">Press button to connect and get the realtime Sensor Data.</div>
     <div role="main" class="ui-content">
+        <hr/>
+        <input type="button" value="Get realtime data" onClick="realtime()" />
+        <hr/>
+        <input type="button" value="Get all data" onClick="initialize()" />
+        <hr/>
+        <p>All realtime Sensor Data</p>
+        <div class="RealtimeResultTable" ></div>
+        <hr/>
+        <p>All Sensor Data from cloudant</p>
         <div class="SensorResultTable" ></div>
     </div>
     <div id="footer">
