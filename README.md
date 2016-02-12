@@ -23,7 +23,7 @@ The objective is to help to understand how the integration technical works betwe
 ## 2. Available functionality on web pages
 
   1. _Get audio and play the audio in Browser_
-  
+
   ![Template Audio Data Page](https://github.com/thomassuedbroecker/iOSMQTT-Bluemix-IoT-NodeRED/blob/master/iot-mqtt-for-ios-Images/template-audio-data-page.jpg)
 
   2. _Show GeoLocation of Sensor_
@@ -144,6 +144,7 @@ After the creation of the Type you create a concrete Device this information is 
   3. Copy the ClipboardNodeRed-containsAllNodes.txt content into the Clipboard Either you have it cloned with git or you can get it from git.hub here:(http://bit.ly/20bqIC8)
   4. Import from Clipboard
   5. Make changes in yours in the lines marked with CHANGE as comment in code.
+  
   * NODE NAME: "_**(Show Geo WebSite with Sensor Cloudant Data)**_"
 
       ` <!-- *****     CHANGES  ***** -->
