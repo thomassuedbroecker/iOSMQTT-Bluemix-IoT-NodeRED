@@ -16,7 +16,7 @@ This sample will be a combination, reuse and customization of part from the exis
 
 The objective is to help to understand how the integration technical works between own IoT Cloud, iOS App and Bluemix:
 
-  1. Using the Mobile iOS Device as Sensor for input (Objective-C), to create fake Temperature data.
+  1. Using the Mobile iOS Device as Sensor for input (Objective-C), to create fake Temperature data. (It is also possible to use the Simulator and the TI Sensor Tag)
   2. Using a own IBM IoT Cloud as a Service in Bluemix
   4. Using the in Bluemix Cloundant, IoT Cloud and Watson
 
@@ -28,12 +28,12 @@ The objective is to help to understand how the integration technical works betwe
   4. Sensor Data search in Cloudant
 
 ***
-## 2. Setup the "Just a Fake" sample
+## 3. Setup the "Just a Fake" sample
 
 This is the description of **Bluemix** related tasks and **iOS** related tasks.
 
 ***
-## 2.1 Bluemix related tasks
+## 3.1 Bluemix related tasks
 
 These tasks are
   * Setup a account
@@ -42,7 +42,7 @@ These tasks are
   * Edit the Node-RED application
 
 ***
-### 2.1.1 Setup the Bluemix App
+### 3.1.1 Setup the Bluemix App
   1. Get a Bluemix Account (https://console.ng.bluemix.net)
   2. Instantiate the **IoT Foundation Starter** (https://console.ng.bluemix.net/catalog/starters/internet-of-things-foundation-starter/)
   3. Give it a name **<<your app name>>**
@@ -57,13 +57,13 @@ These tasks are
  12. If the service is running click on the **Internet of Things Foundation** Service in your Bluemix application
 
 ***
-### 2.1.2 Configure the _Internet of Things Foundation Service_
+### 3.1.2 Configure the _Internet of Things Foundation Service_
 
 Now you have to define a DeviceType. This device type information, will be used be the iOS app to connect to the right device in the cloud.
 After the creation of the Type you create a concrete Device this information is also used Hardcoded in iOS app.
 
 ***
-#### 2.1.2.1 Define DeviceType for the _Internet of Things Foundation Service_
+#### 3.1.2.1 Define DeviceType for the _Internet of Things Foundation Service_
 
   1. Click under **Connect your devices** on the Button **Launch Dashboard**
   2. On the Dashboard you can see or **"Organization ID: XXXX"**
@@ -87,7 +87,7 @@ After the creation of the Type you create a concrete Device this information is 
   9. Not insert any _Optional_ Metadata and click **Create**.
 
 ***
-#### 2.1.2.2 Define Device for the Internet of Things Foundation Service
+#### 3.1.2.2 Define Device for the Internet of Things Foundation Service
 
    1. Click on **Device** at the tabs on the Dashboard
    2. Press Button **Add Device**
@@ -115,7 +115,7 @@ After the creation of the Type you create a concrete Device this information is 
 
   _NOTE: Now you have prepared your IoT Cloud with your own Device Type and Device with a ID and Security Validation information._
 
-### 2.1.3 CloudantDB setup
+### 3.1.3 CloudantDB setup
 
   1. In your Bluemix Appliction, click the Cloudant service from your application
   2. Open the dashboard of your Cloudant service by clicking LAUNCH
@@ -124,7 +124,7 @@ After the creation of the Type you create a concrete Device this information is 
   5. Create new Search Index  - use the documentation in ..\TempTracker_IoTBluemixMFPSample-master\tempTrackCloudantConfiguration or (http://bit.ly/1TnfJFv) to do that
 
 ***
-### 2.1.4 Node-RED Configuration
+### 3.1.4 Node-RED Configuration
 
   1. On Bluemix, go to your application and click on the url to open your Node-RED
   2. Delete the content of the default created sheet by selecting all and DEL
@@ -151,14 +151,14 @@ After the creation of the Type you create a concrete Device this information is 
   7. Change the url in **http response Node** for _audio_, _map_ and _cloudant_ nodes to match your nodeRed http address. _NOTE:_ This is for you that you can easily copy and past the URL later in your browser.
 
 ***
-### 2.2 iOS related tasks
+### 3.2 iOS related tasks
 
 These tasks are
   * Configure xCode Project
   * Run the the sample App
 
 ***
-### 2.2.1  Setup the xCode Project
+### 3.2.1  Setup the xCode Project
   1. Open the xCode Project in **_iOSMQTT-Bluemix-IoT-NodeRED/iot-mqtt-for-ios/IoTstarter.xcodeproj_**
 
   2. Relevant classes which are different to the _ios-starter-for-ios project_
@@ -179,17 +179,17 @@ These tasks are
   6. When you press **send Message** _Fake_ sensor data, will be send to your IoT cloud.
 
 ***
-# 3. Source Folder content description
+# 4. Source Folder content description
 
 ***
-## 3.1 Basic UML Documentation
+## 4.1 Basic UML Documentation
 
 * _**iOSMQTT-Bluemix-IoT-NodeRED/iot-mqtt-for-ios-Documentation**_
 
 This folder contains a basic documentation with a UML Model including some diagrams.
 
 ***
-## 3.2 Bluemix - Node-RED Implementation
+## 4.2 Bluemix - Node-RED Implementation
 
 * _**iOSMQTT-Bluemix-IoT-NodeRED/iot-mqtt-for-ios-NodeREDImplemtations**_
 
@@ -199,14 +199,14 @@ The file _ClipboardNodeRed-containsAllNodes.txt_ includes the the whole **Node-R
 The other folders _"templates and functions"_ do contain the "pure" code for some nodes. Just to provide a **more readable** format for you.
 
 ***
-## 3.3 Bluemix - Cloudant configuration
+## 4.3 Bluemix - Cloudant configuration
 
 * _**iOSMQTT-Bluemix-IoT-NodeRED/iot-mqtt-for-ios-CloudantConfiguration**_
 
 This folder contains the needed code and information to build the search index which will be used by the MobileApp TempTracker to search for Device ID, Status, Date and Temperature.
 
 ***
-## 3.4 iOS App Implementation
+## 4.4 iOS App Implementation
 
 *  _**iOSMQTT-Bluemix-IoT-NodeRED/iot-mqtt-for-ios**_
 
