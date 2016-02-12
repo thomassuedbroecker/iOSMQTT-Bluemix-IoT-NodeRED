@@ -149,7 +149,7 @@ After the creation of the Type you create a concrete Device this information is 
 
   6. Change the Text2Speech node to match your Text2Speech service
   7. Change the url in **http response Node** for _audio_, _map_ and _cloudant_ nodes to match your nodeRed http address. _NOTE:_ This is for you that you can easily copy and past the URL later in your browser.
-
+  ![Node-RED-Flow](https://github.com/thomassuedbroecker/iOSMQTT-Bluemix-IoT-NodeRED/blob/master/iot-mqtt-for-ios-Images/node-red-flow.jpg) 
 ***
 ### 3.2 iOS related tasks
 
