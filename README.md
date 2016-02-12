@@ -144,8 +144,8 @@ After the creation of the Type you create a concrete Device this information is 
   3. Copy the ClipboardNodeRed-containsAllNodes.txt content into the Clipboard Either you have it cloned with git or you can get it from git.hub here:(http://bit.ly/20bqIC8)
   4. Import from Clipboard
   5. Make changes in yours in the lines marked with CHANGE as comment in code.
-  
-  * NODE NAME: "_**(Show Geo WebSite with Sensor Cloudant Data)**_"
+
+    * NODE NAME: "_**(Show Geo WebSite with Sensor Cloudant Data)**_"
 
       ` <!-- *****     CHANGES  ***** -->
         <!-- Insert YOUR BLUEMIX URL  -->
@@ -153,7 +153,7 @@ After the creation of the Type you create a concrete Device this information is 
         <p>Hello this is the Cloudant Sensor Geo Data Site ... </p> <a href="YOUR BLUEMIX URL/cloudant">Go to Sensor Data Page</a>
         </div> `
 
-  * NODE NAME: "_**(Show Sensor Cloudant Data on WebSite)**_"
+    * NODE NAME: "_**(Show Sensor Cloudant Data on WebSite)**_"
 
       ` <!-- *****     CHANGES  ***** -->
         <!-- Insert YOUR BLUEMIX URL  -->
@@ -162,7 +162,10 @@ After the creation of the Type you create a concrete Device this information is 
         </div> `
 
   6. Change the Text2Speech node to match your Text2Speech service
-  7. Change the url in **http response Node** for _audio_, _map_ and _cloudant_ nodes to match your nodeRed http address. _NOTE:_ This is for you that you can easily copy and past the URL later in your browser.
+  7. Change the url in **http response Node** for _audio_, _map_ and _cloudant_ nodes to match your nodeRed http address. _NOTE:_ This is for you, that you can later easily copy and past the URL later in your browser.
+
+  Here you can take look to the Node-RED flow you will copy:
+    
   ![Node-RED-Flow](https://github.com/thomassuedbroecker/iOSMQTT-Bluemix-IoT-NodeRED/blob/master/iot-mqtt-for-ios-Images/node-red-flow.jpg)
 
 ***
