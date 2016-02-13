@@ -165,7 +165,7 @@ After the creation of the Type you create a concrete Device this information is 
   7. Change the url in **http response Node** for _audio_, _map_ and _cloudant_ nodes to match your nodeRed http address. _NOTE:_ This is for you, that you can later easily copy and past the URL later in your browser.
 
   Here you can take look to the Node-RED flow you will copy:
-    
+
   ![Node-RED-Flow](https://github.com/thomassuedbroecker/iOSMQTT-Bluemix-IoT-NodeRED/blob/master/iot-mqtt-for-ios-Images/node-red-flow.jpg)
 
 ***
@@ -197,17 +197,24 @@ These tasks are
   6. When you press **send Message** _Fake_ sensor data, will be send to your IoT cloud.
 
 ***
-# 4. Source Folder content description
+# 4. Connect real Sensor, Simulator or iOS Fake to IoT Cloud
+
+  1. Get the Sensor and connect to IoT Cloud (https://developer.ibm.com/recipes/tutorials/connect-a-cc2650-sensortag-to-the-iot-foundations-quickstart/) //-> connect to **IoT Starter Cloud**
+  2. In case you don't have a real Sensor you can use alternative : https://quickstart.internetofthings.ibmcloud.com/iotsensor/ in the upper left corner is the DeviceID you later must use inside Node-RED for the IoT-Node. //-> connect to **IoT Starter Cloud**
+  3. Use your iOS App //-> connect to **your IoT Cloud in your Bluemix Application**
 
 ***
-## 4.1 Basic UML Documentation
+# 5. Source Folder content description
+
+***
+## 5.1 Basic UML Documentation
 
 * _**iOSMQTT-Bluemix-IoT-NodeRED/iot-mqtt-for-ios-Documentation**_
 
 This folder contains a basic documentation with a UML Model including some diagrams.
 
 ***
-## 4.2 Bluemix - Node-RED Implementation
+## 5.2 Bluemix - Node-RED Implementation
 
 * _**iOSMQTT-Bluemix-IoT-NodeRED/iot-mqtt-for-ios-NodeREDImplemtations**_
 
@@ -217,15 +224,22 @@ The file _ClipboardNodeRed-containsAllNodes.txt_ includes the the whole **Node-R
 The other folders _"templates and functions"_ do contain the "pure" code for some nodes. Just to provide a **more readable** format for you.
 
 ***
-## 4.3 Bluemix - Cloudant configuration
+## 5.3 Bluemix - Cloudant configuration
 
 * _**iOSMQTT-Bluemix-IoT-NodeRED/iot-mqtt-for-ios-CloudantConfiguration**_
 
 This folder contains the needed code and information to build the search index which will be used by the MobileApp TempTracker to search for Device ID, Status, Date and Temperature.
 
 ***
-## 4.4 iOS App Implementation
+## 5.4 iOS App Implementation
 
 *  _**iOSMQTT-Bluemix-IoT-NodeRED/iot-mqtt-for-ios**_
 
 This folder contains a xCode Project with the MobileApp based on _"Objective-C"_.
+
+***
+## 5.5 Images
+
+*  _**iOSMQTT-Bluemix-IoT-NodeRED/iot-mqtt-for-ios-Images**_
+
+This folder contains a images which will be used here in the readme.
