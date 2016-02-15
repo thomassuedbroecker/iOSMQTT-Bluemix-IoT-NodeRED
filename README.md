@@ -1,9 +1,15 @@
 # "Just a Fake" is a IoT Cloud, iOS and Bluemix sample
 
-This sample will be a combination, reuse and customization of part from the existing "IoT Starter for iOS" and "TempTracker_IoTBluemixMFPSample".
+This sample is be a combination, reuse and customization of part from the existing "IoT Starter for iOS" and "TempTracker_IoTBluemixMFPSample".
 
 * [IoT Starter for iOS](https://github.com/Aiguo/iot-starter-for-ios)
 * [TempTracker_IoTBluemixMFPSample](https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample)
+
+If you want to use the *TempTracker* MobileApp you have to follow the steps the two following sections of the *TempTracker* sample.
+
+* [3.2 Mobile App related](https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample#32-mobile-app-related)
+* [4.2 Concrete Steps to Setup TempTracker – (all MobileFirst tasks)](https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample#42-concrete-steps-to-setup-temptracker--all-mobilefirst-tasks)
+Here you must replace the URLs with your current Bluemix Application. You can do this, because I used the same sensor data structure, like I did the *TempTracker* sample.
 
 **Table of content of the readme.md**
 
