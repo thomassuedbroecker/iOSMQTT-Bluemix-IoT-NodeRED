@@ -248,4 +248,4 @@ This folder contains a xCode Project with the MobileApp based on _"Objective-C"_
 
 *  _**iOSMQTT-Bluemix-IoT-NodeRED/iot-mqtt-for-ios-Images**_
 
-This folder contains a images which will be used here in the readme.
+This folder contains the images which will be used here in the readme.
