@@ -62,7 +62,7 @@
             console.log("socket_get", socket_get);
 
             socket_get.onopen = function() {
-                $("#status").html("connected");
+                $("#status").html("loadSearchResult-Connected");
                 console.log("socket_get-connected");
             }
 
@@ -88,8 +88,15 @@
                 // Create Header for Table
                 // ObjTable.append('<caption>Result of Sensor Data Search</caption>');
                 // Create columns
-                ObjTable.append('<thead><th data-priority="1">DeviceID</th><th data-priority="2">Temperature</th><th data-priority="3">Status</th><th>Message</th></thead>');
+                ObjTable.append('<thead><th data-priority="1">DeviceID</th>'+
+                                       '<th data-priority="2">Temperature</th>' +
+                                       '<th data-priority="3">Status</th>' +
+                                       '<th data-priority="4">Message</th>' +
+                                       '<th data-priority="5">Image</th>' +
+                                       '</thead>');
                 ObjTable.append('<tbody>');
+
+
                 for(var i = 0; i < sensors.length; i++) {
         			    var sensor = sensors[i];
 
@@ -109,7 +116,9 @@
                   ObjTable.append( '<tr><td>' + sensor.deviceId + '</td>' +
                                     '<td>' + sensor.temp + '</td>' +
                                     '<td>' + sensor.status + '</td>' +
-                                    '<td>' + sensor.message + '</td></tr>' );
+                                    '<td>' + sensor.message + '</td>' +
+                                    '<td>' + '<img src="'  + sensor.image + '"/></td>' +
+                                    '</tr>' );
 
                 }
                 ObjTable.append('</tbody>');
@@ -141,7 +150,7 @@
            console.log("socket_send", socket_send);
 
            socket_send.onopen = function() {
-               $("#status").html("connected");
+               $("#status").html("sendSearch-connected");
                console.log("socket_send-connected");
                // https://developer.mozilla.org/en-US/docs/Web/API/WebSocket#Ready_state_constants
                if (socket_send.readyState === 1) {
@@ -201,9 +210,9 @@
             <hr/>
             <div id="resultcount">0</div>
             <hr/>
-            <input type="button" value="Update" onClick="sendMessage()" />
+            <input type="button" value="Send Search" onClick="sendMessage()" />
             <hr/>
-            <input type="button" value="Load" onClick="wsConnectC()" />
+            <input type="button" value="Load Search Result" onClick="wsConnectC()" />
             <!-- <div class="SensorResultList" ></div> -->
             <hr/>
             <div class="SensorResultTable" ></div>

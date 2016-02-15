@@ -91,15 +91,23 @@
           // Create Header for Table
           // ObjTable.append('<caption>Result of Sensor Data Search</caption>');
           // Create columns
-          ObjTable.append('<thead><th data-priority="1">DeviceID</th><th data-priority="2">Temperature</th><th data-priority="3">Status</th><th>Message</th></thead>');
+          ObjTable.append('<thead><th data-priority="1">DeviceID</th>'+
+                                 '<th data-priority="2">Temperature</th>' +
+                                 '<th data-priority="3">Status</th>' +
+                                 '<th data-priority="4">Message</th>' +
+                                 '<th data-priority="5">Image</th>' +
+                                 '</thead>');
           ObjTable.append('<tbody>');
+
           for(var i = 0; i < sensors.length; i++) {
             var sensor = sensors[i];
             //Table
             ObjTable.append( '<tr><td>' + sensor.deviceId + '</td>' +
                             '<td>' + sensor.temp + '</td>' +
                             '<td>' + sensor.status + '</td>' +
-                            '<td>' + sensor.message + '</td></tr>' );
+                            '<td>' + sensor.message + '</td>' +
+                            '<td>' + '<img src="'  + sensor.image + '"/></td>' +
+                            '</tr>' );
 
           }
           ObjTable.append('</tbody>');
@@ -130,7 +138,7 @@
            //$('#output').text('Waiting for cloudant data ...');
            document.getElementById("outputrealtime").innerHTML = 'Waiting for reatime data ...';
            console.log("Connected realtime websocket");
-           console.log("Sending ping..");
+           console.log("Sending ping to realtime websocket..");
            sock.send("Ping!");
            console.log("Ping sended..");
          };
