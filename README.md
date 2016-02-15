@@ -5,7 +5,7 @@ This sample is be a combination, reuse and customization of part from the existi
 * [IoT Starter for iOS](https://github.com/Aiguo/iot-starter-for-ios)
 * [TempTracker_IoTBluemixMFPSample](https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample)
 
-If you want to use the *TempTracker* MobileApp you have to follow the steps the two following sections of the *TempTracker* sample.
+_NOTE:_ If you want to use the **TempTracker** MobileApp you have to follow the steps the two following sections of the **TempTracker** sample.
 
 * [3.2 Mobile App related](https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample#32-mobile-app-related)
 * [4.2 Concrete Steps to Setup TempTracker – (all MobileFirst tasks)](https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample#42-concrete-steps-to-setup-temptracker--all-mobilefirst-tasks)
@@ -20,11 +20,11 @@ Here you must replace the URLs with your current Bluemix Application. You can do
 ***
 ## 1. Introduction
 
-The objective is to help to understand how the integration technical works between own IoT Cloud, iOS App and Bluemix:
+The objective is to help to understand how the integration technical works between own _IoT Cloud_ bind to a Bluemix Application, _iOS MQTT App_ and Bluemix Application it self:
 
-  1. Using the Mobile iOS Device as Sensor for input (Objective-C), to create fake Temperature data. (It is also possible to use the Simulator and the TI Sensor Tag)
+  1. Using the Mobile *iOS Device* as Sensor for input _(Objective-C)_, to create **fake Temperature data**. (It is also possible to use concurrently the _Simulator_ and the _TI Sensor Tag_ as input)
   2. Using a own IBM IoT Cloud as a Service in Bluemix
-  4. Using the in Bluemix Cloundant, IoT Cloud and Watson
+  3. Using the in Bluemix Cloundant and Watson
 
 ## 2. Available functionality on web pages
 
