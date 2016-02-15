@@ -5,7 +5,7 @@ This sample is be a combination, reuse and customization of part from the existi
 * [IoT Starter for iOS](https://github.com/Aiguo/iot-starter-for-ios)
 * [TempTracker_IoTBluemixMFPSample](https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample)
 
-_NOTE:_ If you want to use the **TempTracker** MobileApp you have to follow the steps the two following sections of the **TempTracker** sample.
+_NOTE:_ If you want to use the **TempTracker** MobileApp you have to follow the steps in the two following sections of the **TempTracker** sample.
 
 * [3.2 Mobile App related](https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample#32-mobile-app-related)
 * [4.2 Concrete Steps to Setup TempTracker – (all MobileFirst tasks)](https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample#42-concrete-steps-to-setup-temptracker--all-mobilefirst-tasks)
