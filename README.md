@@ -1,6 +1,6 @@
 # "Just a Fake" is a IoT Cloud, iOS and Bluemix sample
 
-This sample is be a combination, reuse and customization of part from the existing "IoT Starter for iOS" and "TempTracker_IoTBluemixMFPSample".
+This sample is be a combination, reuse and customization of parts from the existing "IoT Starter for iOS" and "TempTracker_IoTBluemixMFPSample".
 
 * [IoT Starter for iOS](https://github.com/Aiguo/iot-starter-for-ios)
 * [TempTracker_IoTBluemixMFPSample](https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample)
