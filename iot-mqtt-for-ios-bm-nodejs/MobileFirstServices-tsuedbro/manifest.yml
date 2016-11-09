@@ -1,0 +1,12 @@
+applications:
+- path: .
+  memory: 512M
+  instances: 1
+  domain: eu-gb.mybluemix.net
+  name: MobileFirstServices-tsuedbro
+  host: MobileFirstServices-tsuedbro
+  disk_quota: 1024M
+  services:
+  - MobileFirstServices-tsuedbro-AdvancedMobileAccess
+  - MobileFirstServices-tsuedbro-imfpush
+  - MobileFirstServices-tsuedbro-cloudantNoSQLDB

@@ -1,14 +1,14 @@
-var msg1 = { payload:"undefined"};
-var msg2 = { payload:"undefined"};
+vvar count = msg.payload.length;
 
-// Check valid payload
-if ((msg.payload.length !== undefined)&&
-    (msg.payload[0].sensordatavalue.message!==undefined))
-{ var count = msg.payload.length;
-  var list1 = [];
+var list1 = [];
+var list2 = [];
+var msg1 = { payload:"default output 1"};
+var msg2 = { payload:"default output 2"};
 
-  // Create search result list
-  for (i=0;i<count;i++) {
+for (i=0;i<count;i++) {
+
+   if (msg.payload[i].sensordatavalue.message !== undefined)
+   {
        list1.push({
         _id: msg.payload[i]._id,
         _rev: msg.payload[i]._rev,
@@ -27,11 +27,23 @@ if ((msg.payload.length !== undefined)&&
         imageLocalURL: msg.payload[i].sensordatavalue.imageLocalURL,
         comment : msg.payload[i].sensordatavalue.comment
       });
+   } else {
+
+      list2.push({
+        _id: msg.payload[i]._id,
+        _rev: msg.payload[i]._rev
+      });
    }
-   msg1.payload = {
-                    "docs":
-                    list1
-                  }
 }
+
+msg1.payload = {
+                 "docs":
+                 list1
+               }
+
+msg2.payload = {
+                 "docs":
+                 list2
+               }
 
 return [msg1, msg2];

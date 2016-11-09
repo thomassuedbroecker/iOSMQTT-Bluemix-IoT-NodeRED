@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "IoTstarter/AppDelegate.m"
+            timestampString = "489585029.631672"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[AppDelegate logger]"
+                  moduleName = "IoTMobileStarter"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tsuedbroecker/Documents/tsuedbro/MobileBluemix/dev/gitHubRepo/iOSMQTT-Bluemix-IoT-NodeRED/iot-mqtt-for-ios-bm-mobile/IoTstarter/AppDelegate.m"
+                  timestampString = "489585030.674896"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[AppDelegate setLogger:]"
+                  moduleName = "IoTMobileStarter"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tsuedbroecker/Documents/tsuedbro/MobileBluemix/dev/gitHubRepo/iOSMQTT-Bluemix-IoT-NodeRED/iot-mqtt-for-ios-bm-mobile/IoTstarter/AppDelegate.m"
+                  timestampString = "489585030.676986"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "32">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

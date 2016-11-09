@@ -1,0 +1,1298 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2729B46D19DDFB4B00356440 /* Second_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2729B46C19DDFB4B00356440 /* Second_iPhone.storyboard */; };
+		2730A23C19FA93F300B6A0C3 /* iotlogo2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2730A23B19FA93F300B6A0C3 /* iotlogo2.png */; };
+		2730A23D19FA94CA00B6A0C3 /* iotlogo2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2730A23B19FA93F300B6A0C3 /* iotlogo2.png */; };
+		27468DB519CB248800435340 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27468DB419CB248800435340 /* Foundation.framework */; };
+		27468DB719CB248800435340 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27468DB619CB248800435340 /* CoreGraphics.framework */; };
+		27468DB919CB248800435340 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27468DB819CB248800435340 /* UIKit.framework */; };
+		27468DBF19CB248800435340 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 27468DBD19CB248800435340 /* InfoPlist.strings */; };
+		27468DC119CB248800435340 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 27468DC019CB248800435340 /* main.m */; };
+		27468DC519CB248800435340 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 27468DC419CB248800435340 /* AppDelegate.m */; };
+		27468DC819CB248800435340 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27468DC619CB248800435340 /* Main_iPhone.storyboard */; };
+		27468DCB19CB248800435340 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27468DC919CB248800435340 /* Main_iPad.storyboard */; };
+		27468DCE19CB248800435340 /* IoTStarterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27468DCD19CB248800435340 /* IoTStarterViewController.m */; };
+		27468DD019CB248800435340 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27468DCF19CB248800435340 /* Images.xcassets */; };
+		27468DD719CB248800435340 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27468DD619CB248800435340 /* XCTest.framework */; };
+		27468DD819CB248800435340 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27468DB419CB248800435340 /* Foundation.framework */; };
+		27468DD919CB248800435340 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27468DB819CB248800435340 /* UIKit.framework */; };
+		27468DE119CB248800435340 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 27468DDF19CB248800435340 /* InfoPlist.strings */; };
+		27468DE319CB248800435340 /* IoTstarterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27468DE219CB248800435340 /* IoTstarterTests.m */; };
+		27468DF419CB406F00435340 /* Messenger.m in Sources */ = {isa = PBXBuildFile; fileRef = 27468DF319CB406F00435340 /* Messenger.m */; };
+		27468DF719CB407800435340 /* Callbacks.m in Sources */ = {isa = PBXBuildFile; fileRef = 27468DF619CB407800435340 /* Callbacks.m */; };
+		27468DFA19CB409800435340 /* TopicFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 27468DF919CB409800435340 /* TopicFactory.m */; };
+		27468E0019CB40AC00435340 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 27468DFF19CB40AC00435340 /* Constants.m */; };
+		27468E0319CB43D500435340 /* libiosMQTT.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27468E0119CB43D500435340 /* libiosMQTT.a */; };
+		274B158C19F6F6F500FF15DE /* ic_chevron-right.png in Resources */ = {isa = PBXBuildFile; fileRef = 274B158A19F6F6F500FF15DE /* ic_chevron-right.png */; };
+		274B158D19F6F6F500FF15DE /* ic_chevron-left.png in Resources */ = {isa = PBXBuildFile; fileRef = 274B158B19F6F6F500FF15DE /* ic_chevron-left.png */; };
+		275172041A1256A600BC0072 /* RemoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 275172031A1256A600BC0072 /* RemoteViewController.m */; };
+		275172051A1258BB00BC0072 /* RemoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 275172031A1256A600BC0072 /* RemoteViewController.m */; };
+		275172081A12911D00BC0072 /* DPadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 275172071A12911D00BC0072 /* DPadView.m */; };
+		275172091A1293FD00BC0072 /* DPadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 275172071A12911D00BC0072 /* DPadView.m */; };
+		27555DB81A5B211F00E5A7D0 /* ic_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 27555DB61A5B211F00E5A7D0 /* ic_icon.png */; };
+		27555DB91A5B211F00E5A7D0 /* ic_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 27555DB61A5B211F00E5A7D0 /* ic_icon.png */; };
+		27555DBA1A5B211F00E5A7D0 /* ic_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 27555DB71A5B211F00E5A7D0 /* ic_logo.png */; };
+		27555DBB1A5B211F00E5A7D0 /* ic_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 27555DB71A5B211F00E5A7D0 /* ic_logo.png */; };
+		2763729E19D3419A00706945 /* ic_home.png in Resources */ = {isa = PBXBuildFile; fileRef = 2763729A19D3419A00706945 /* ic_home.png */; };
+		2763729F19D3419A00706945 /* ic_cogwheels.png in Resources */ = {isa = PBXBuildFile; fileRef = 2763729B19D3419A00706945 /* ic_cogwheels.png */; };
+		276372A019D3419A00706945 /* ic_picture.png in Resources */ = {isa = PBXBuildFile; fileRef = 2763729C19D3419A00706945 /* ic_picture.png */; };
+		276372A119D3419A00706945 /* ic_circle_question_mark.png in Resources */ = {isa = PBXBuildFile; fileRef = 2763729D19D3419A00706945 /* ic_circle_question_mark.png */; };
+		276372A419D4A43800706945 /* DrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 276372A319D4A43800706945 /* DrawingView.m */; };
+		277C44381A2F92770097313A /* IoTProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 277C44371A2F92770097313A /* IoTProfile.m */; };
+		277C44391A2F92770097313A /* IoTProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 277C44371A2F92770097313A /* IoTProfile.m */; };
+		277C443D1A2FAD780097313A /* ProfilesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 277C443C1A2FAD780097313A /* ProfilesTableViewController.m */; };
+		277C443E1A2FAD780097313A /* ProfilesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 277C443C1A2FAD780097313A /* ProfilesTableViewController.m */; };
+		278515F61A016FCA000521F6 /* iotlogo29x29.png in Resources */ = {isa = PBXBuildFile; fileRef = 278515EE1A016FCA000521F6 /* iotlogo29x29.png */; };
+		278515F71A016FCA000521F6 /* iotlogo29x29.png in Resources */ = {isa = PBXBuildFile; fileRef = 278515EE1A016FCA000521F6 /* iotlogo29x29.png */; };
+		278515F81A016FCA000521F6 /* iotlogo40x40.png in Resources */ = {isa = PBXBuildFile; fileRef = 278515EF1A016FCA000521F6 /* iotlogo40x40.png */; };
+		278515F91A016FCA000521F6 /* iotlogo40x40.png in Resources */ = {isa = PBXBuildFile; fileRef = 278515EF1A016FCA000521F6 /* iotlogo40x40.png */; };
+		278515FA1A016FCA000521F6 /* iotlogo58x58.png in Resources */ = {isa = PBXBuildFile; fileRef = 278515F01A016FCA000521F6 /* iotlogo58x58.png */; };
+		278515FB1A016FCA000521F6 /* iotlogo58x58.png in Resources */ = {isa = PBXBuildFile; fileRef = 278515F01A016FCA000521F6 /* iotlogo58x58.png */; };
+		278515FC1A016FCA000521F6 /* iotlogo60x60.png in Resources */ = {isa = PBXBuildFile; fileRef = 278515F11A016FCA000521F6 /* iotlogo60x60.png */; };
+		278515FD1A016FCA000521F6 /* iotlogo60x60.png in Resources */ = {isa = PBXBuildFile; fileRef = 278515F11A016FCA000521F6 /* iotlogo60x60.png */; };
+		278515FE1A016FCA000521F6 /* iotlogo76x76.png in Resources */ = {isa = PBXBuildFile; fileRef = 278515F21A016FCA000521F6 /* iotlogo76x76.png */; };
+		278515FF1A016FCA000521F6 /* iotlogo76x76.png in Resources */ = {isa = PBXBuildFile; fileRef = 278515F21A016FCA000521F6 /* iotlogo76x76.png */; };
+		278516001A016FCA000521F6 /* iotlogo80x80.png in Resources */ = {isa = PBXBuildFile; fileRef = 278515F31A016FCA000521F6 /* iotlogo80x80.png */; };
+		278516011A016FCA000521F6 /* iotlogo80x80.png in Resources */ = {isa = PBXBuildFile; fileRef = 278515F31A016FCA000521F6 /* iotlogo80x80.png */; };
+		278516021A016FCA000521F6 /* iotlogo152x152.png in Resources */ = {isa = PBXBuildFile; fileRef = 278515F41A016FCA000521F6 /* iotlogo152x152.png */; };
+		278516031A016FCA000521F6 /* iotlogo152x152.png in Resources */ = {isa = PBXBuildFile; fileRef = 278515F41A016FCA000521F6 /* iotlogo152x152.png */; };
+		278516041A016FCA000521F6 /* iotlogo180x180.png in Resources */ = {isa = PBXBuildFile; fileRef = 278515F51A016FCA000521F6 /* iotlogo180x180.png */; };
+		278516051A016FCA000521F6 /* iotlogo180x180.png in Resources */ = {isa = PBXBuildFile; fileRef = 278515F51A016FCA000521F6 /* iotlogo180x180.png */; };
+		278516071A0170E0000521F6 /* iotlogo120x120.png in Resources */ = {isa = PBXBuildFile; fileRef = 278516061A0170E0000521F6 /* iotlogo120x120.png */; };
+		278516081A0170E0000521F6 /* iotlogo120x120.png in Resources */ = {isa = PBXBuildFile; fileRef = 278516061A0170E0000521F6 /* iotlogo120x120.png */; };
+		278ACC6F1A12B81A002EF6F0 /* ic_left_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 278ACC6B1A12B81A002EF6F0 /* ic_left_arrow.png */; };
+		278ACC701A12B81A002EF6F0 /* ic_left_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 278ACC6B1A12B81A002EF6F0 /* ic_left_arrow.png */; };
+		278ACC711A12B81A002EF6F0 /* ic_right_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 278ACC6C1A12B81A002EF6F0 /* ic_right_arrow.png */; };
+		278ACC721A12B81A002EF6F0 /* ic_right_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 278ACC6C1A12B81A002EF6F0 /* ic_right_arrow.png */; };
+		278ACC731A12B81A002EF6F0 /* ic_down_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 278ACC6D1A12B81A002EF6F0 /* ic_down_arrow.png */; };
+		278ACC741A12B81A002EF6F0 /* ic_down_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 278ACC6D1A12B81A002EF6F0 /* ic_down_arrow.png */; };
+		278ACC751A12B81A002EF6F0 /* ic_up_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 278ACC6E1A12B81A002EF6F0 /* ic_up_arrow.png */; };
+		278ACC761A12B81A002EF6F0 /* ic_up_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 278ACC6E1A12B81A002EF6F0 /* ic_up_arrow.png */; };
+		278ACC791A13C7E7002EF6F0 /* Trace.m in Sources */ = {isa = PBXBuildFile; fileRef = 278ACC781A13C7E7002EF6F0 /* Trace.m */; };
+		278ACC7A1A13C7E7002EF6F0 /* Trace.m in Sources */ = {isa = PBXBuildFile; fileRef = 278ACC781A13C7E7002EF6F0 /* Trace.m */; };
+		278ACC7C1A2E4A4B002EF6F0 /* ic_gamepad.png in Resources */ = {isa = PBXBuildFile; fileRef = 278ACC7B1A2E4A4B002EF6F0 /* ic_gamepad.png */; };
+		278ACC7D1A2E4A4B002EF6F0 /* ic_gamepad.png in Resources */ = {isa = PBXBuildFile; fileRef = 278ACC7B1A2E4A4B002EF6F0 /* ic_gamepad.png */; };
+		278ACC7F1A2E7157002EF6F0 /* MessageFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 278ACC7E1A2E7157002EF6F0 /* MessageFactory.m */; };
+		278ACC801A2E7157002EF6F0 /* MessageFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 278ACC7E1A2E7157002EF6F0 /* MessageFactory.m */; };
+		27A0C7A119EEC766009FA500 /* TopicFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 27468DF919CB409800435340 /* TopicFactory.m */; };
+		27A0C7A219EEC766009FA500 /* IoTStarterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27468DCD19CB248800435340 /* IoTStarterViewController.m */; };
+		27A0C7A319EEC766009FA500 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 27468DC419CB248800435340 /* AppDelegate.m */; };
+		27A0C7A519EEC766009FA500 /* LogTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27B5927F19E635D100593424 /* LogTableViewController.m */; };
+		27A0C7A619EEC766009FA500 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 27468DFF19CB40AC00435340 /* Constants.m */; };
+		27A0C7A719EEC766009FA500 /* Callbacks.m in Sources */ = {isa = PBXBuildFile; fileRef = 27468DF619CB407800435340 /* Callbacks.m */; };
+		27A0C7A919EEC766009FA500 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 27468DC019CB248800435340 /* main.m */; };
+		27A0C7AA19EEC766009FA500 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27B5927A19E5B22B00593424 /* LoginViewController.m */; };
+		27A0C7AC19EEC766009FA500 /* Messenger.m in Sources */ = {isa = PBXBuildFile; fileRef = 27468DF319CB406F00435340 /* Messenger.m */; };
+		27A0C7AD19EEC766009FA500 /* DrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 276372A319D4A43800706945 /* DrawingView.m */; };
+		27A0C7AF19EEC766009FA500 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27468DB619CB248800435340 /* CoreGraphics.framework */; };
+		27A0C7B019EEC766009FA500 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27468DB819CB248800435340 /* UIKit.framework */; };
+		27A0C7B119EEC766009FA500 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27468DB419CB248800435340 /* Foundation.framework */; };
+		27A0C7B219EEC766009FA500 /* libiosMQTT.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27468E0119CB43D500435340 /* libiosMQTT.a */; };
+		27A0C7B419EEC766009FA500 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27468DC919CB248800435340 /* Main_iPad.storyboard */; };
+		27A0C7B519EEC766009FA500 /* ic_cogwheels.png in Resources */ = {isa = PBXBuildFile; fileRef = 2763729B19D3419A00706945 /* ic_cogwheels.png */; };
+		27A0C7B619EEC766009FA500 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27468DCF19CB248800435340 /* Images.xcassets */; };
+		27A0C7B719EEC766009FA500 /* iotlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B5927C19E5C4B000593424 /* iotlogo.png */; };
+		27A0C7B819EEC766009FA500 /* orange2.png in Resources */ = {isa = PBXBuildFile; fileRef = 27A5B6DD19D2064D00E36207 /* orange2.png */; };
+		27A0C7B919EEC766009FA500 /* ic_picture.png in Resources */ = {isa = PBXBuildFile; fileRef = 2763729C19D3419A00706945 /* ic_picture.png */; };
+		27A0C7BA19EEC766009FA500 /* ic_file.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B5928119EC734700593424 /* ic_file.png */; };
+		27A0C7BB19EEC766009FA500 /* ic_circle_question_mark.png in Resources */ = {isa = PBXBuildFile; fileRef = 2763729D19D3419A00706945 /* ic_circle_question_mark.png */; };
+		27A0C7BC19EEC766009FA500 /* Second_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2729B46C19DDFB4B00356440 /* Second_iPhone.storyboard */; };
+		27A0C7BD19EEC766009FA500 /* ic_home.png in Resources */ = {isa = PBXBuildFile; fileRef = 2763729A19D3419A00706945 /* ic_home.png */; };
+		27A0C7BE19EEC766009FA500 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27468DC619CB248800435340 /* Main_iPhone.storyboard */; };
+		27A0C7BF19EEC766009FA500 /* iotlogosmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B5928319EC74CF00593424 /* iotlogosmall.png */; };
+		27A0C7C019EEC766009FA500 /* ic_stats.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B5928519EC75DF00593424 /* ic_stats.png */; };
+		27A0C7C119EEC766009FA500 /* orange.png in Resources */ = {isa = PBXBuildFile; fileRef = 27A5B6DC19D2064D00E36207 /* orange.png */; };
+		27A0C7C219EEC766009FA500 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 27468DBD19CB248800435340 /* InfoPlist.strings */; };
+		27A5B6DE19D2064D00E36207 /* orange.png in Resources */ = {isa = PBXBuildFile; fileRef = 27A5B6DC19D2064D00E36207 /* orange.png */; };
+		27A5B6DF19D2064D00E36207 /* orange2.png in Resources */ = {isa = PBXBuildFile; fileRef = 27A5B6DD19D2064D00E36207 /* orange2.png */; };
+		27B5927B19E5B22B00593424 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27B5927A19E5B22B00593424 /* LoginViewController.m */; };
+		27B5927D19E5C4B000593424 /* iotlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B5927C19E5C4B000593424 /* iotlogo.png */; };
+		27B5928019E635D100593424 /* LogTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27B5927F19E635D100593424 /* LogTableViewController.m */; };
+		27B5928219EC734700593424 /* ic_file.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B5928119EC734700593424 /* ic_file.png */; };
+		27B5928419EC74CF00593424 /* iotlogosmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B5928319EC74CF00593424 /* iotlogosmall.png */; };
+		27B5928619EC75DF00593424 /* ic_stats.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B5928519EC75DF00593424 /* ic_stats.png */; };
+		27E4809F19F8560F00762CEB /* ic_chevron-right.png in Resources */ = {isa = PBXBuildFile; fileRef = 274B158A19F6F6F500FF15DE /* ic_chevron-right.png */; };
+		27E480A019F8561200762CEB /* ic_chevron-left.png in Resources */ = {isa = PBXBuildFile; fileRef = 274B158B19F6F6F500FF15DE /* ic_chevron-left.png */; };
+		5E4663879CAE1CD751FF3CB0 /* libPods-IoTMobileStarterDev.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CD56E8C393B3ABF25D7EE6E /* libPods-IoTMobileStarterDev.a */; };
+		B5ED5847E93ECEC9DB475005 /* libPods-IoTMobileStarter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FBDCD946923880C199EAA320 /* libPods-IoTMobileStarter.a */; };
+		FCB47D2AD6EBFDEA7C84841A /* libPods-IoTMobileStarterTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 899DBABB8F9E3ACFA6B7B5CA /* libPods-IoTMobileStarterTests.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		27468DDA19CB248800435340 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 27468DA919CB248800435340 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 27468DB019CB248800435340;
+			remoteInfo = IoTstarter;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0A751946FC5E9F30CFA64082 /* Pods-IoTMobileStarterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IoTMobileStarterTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IoTMobileStarterTests/Pods-IoTMobileStarterTests.debug.xcconfig"; sourceTree = "<group>"; };
+		167DC29E51992A46AED6C1A8 /* Pods-IoTMobileStarterDev.distribution.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IoTMobileStarterDev.distribution.xcconfig"; path = "Pods/Target Support Files/Pods-IoTMobileStarterDev/Pods-IoTMobileStarterDev.distribution.xcconfig"; sourceTree = "<group>"; };
+		2729B46C19DDFB4B00356440 /* Second_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Second_iPhone.storyboard; sourceTree = "<group>"; };
+		2730A23B19FA93F300B6A0C3 /* iotlogo2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iotlogo2.png; sourceTree = "<group>"; };
+		27468DB119CB248800435340 /* IoTMobileStarter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IoTMobileStarter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		27468DB419CB248800435340 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		27468DB619CB248800435340 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		27468DB819CB248800435340 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		27468DBC19CB248800435340 /* IoTMobileStarter-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IoTMobileStarter-Info.plist"; sourceTree = "<group>"; };
+		27468DBE19CB248800435340 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		27468DC019CB248800435340 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		27468DC219CB248800435340 /* IoTMobileStarter-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IoTMobileStarter-Prefix.pch"; sourceTree = "<group>"; };
+		27468DC319CB248800435340 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		27468DC419CB248800435340 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		27468DC719CB248800435340 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		27468DCA19CB248800435340 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		27468DCC19CB248800435340 /* IoTStarterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IoTStarterViewController.h; sourceTree = "<group>"; };
+		27468DCD19CB248800435340 /* IoTStarterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IoTStarterViewController.m; sourceTree = "<group>"; };
+		27468DCF19CB248800435340 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		27468DD519CB248800435340 /* IoTMobileStarter.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IoTMobileStarter.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		27468DD619CB248800435340 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		27468DDE19CB248800435340 /* IoTMobileStarterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IoTMobileStarterTests-Info.plist"; sourceTree = "<group>"; };
+		27468DE019CB248800435340 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		27468DE219CB248800435340 /* IoTstarterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IoTstarterTests.m; sourceTree = "<group>"; };
+		27468DF219CB406F00435340 /* Messenger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Messenger.h; sourceTree = "<group>"; };
+		27468DF319CB406F00435340 /* Messenger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Messenger.m; sourceTree = "<group>"; };
+		27468DF519CB407800435340 /* Callbacks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Callbacks.h; sourceTree = "<group>"; };
+		27468DF619CB407800435340 /* Callbacks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Callbacks.m; sourceTree = "<group>"; };
+		27468DF819CB409800435340 /* TopicFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopicFactory.h; sourceTree = "<group>"; };
+		27468DF919CB409800435340 /* TopicFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopicFactory.m; sourceTree = "<group>"; };
+		27468DFE19CB40AC00435340 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		27468DFF19CB40AC00435340 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		27468E0119CB43D500435340 /* libiosMQTT.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libiosMQTT.a; sourceTree = "<group>"; };
+		27468E0219CB43D500435340 /* MqttOCClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MqttOCClient.h; sourceTree = "<group>"; };
+		274B158A19F6F6F500FF15DE /* ic_chevron-right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_chevron-right.png"; sourceTree = "<group>"; };
+		274B158B19F6F6F500FF15DE /* ic_chevron-left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_chevron-left.png"; sourceTree = "<group>"; };
+		275172021A1256A600BC0072 /* RemoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemoteViewController.h; sourceTree = "<group>"; };
+		275172031A1256A600BC0072 /* RemoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemoteViewController.m; sourceTree = "<group>"; };
+		275172061A12911D00BC0072 /* DPadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPadView.h; sourceTree = "<group>"; };
+		275172071A12911D00BC0072 /* DPadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPadView.m; sourceTree = "<group>"; };
+		27555DB61A5B211F00E5A7D0 /* ic_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_icon.png; sourceTree = "<group>"; };
+		27555DB71A5B211F00E5A7D0 /* ic_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_logo.png; sourceTree = "<group>"; };
+		2763729A19D3419A00706945 /* ic_home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_home.png; sourceTree = "<group>"; };
+		2763729B19D3419A00706945 /* ic_cogwheels.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_cogwheels.png; sourceTree = "<group>"; };
+		2763729C19D3419A00706945 /* ic_picture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_picture.png; sourceTree = "<group>"; };
+		2763729D19D3419A00706945 /* ic_circle_question_mark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_circle_question_mark.png; sourceTree = "<group>"; };
+		276372A219D4A43800706945 /* DrawingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawingView.h; sourceTree = "<group>"; };
+		276372A319D4A43800706945 /* DrawingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawingView.m; sourceTree = "<group>"; };
+		277C44371A2F92770097313A /* IoTProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IoTProfile.m; sourceTree = "<group>"; };
+		277C443A1A2F92840097313A /* IoTProfile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IoTProfile.h; sourceTree = "<group>"; };
+		277C443B1A2FAD780097313A /* ProfilesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfilesTableViewController.h; sourceTree = "<group>"; };
+		277C443C1A2FAD780097313A /* ProfilesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfilesTableViewController.m; sourceTree = "<group>"; };
+		278515EE1A016FCA000521F6 /* iotlogo29x29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iotlogo29x29.png; sourceTree = "<group>"; };
+		278515EF1A016FCA000521F6 /* iotlogo40x40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iotlogo40x40.png; sourceTree = "<group>"; };
+		278515F01A016FCA000521F6 /* iotlogo58x58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iotlogo58x58.png; sourceTree = "<group>"; };
+		278515F11A016FCA000521F6 /* iotlogo60x60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iotlogo60x60.png; sourceTree = "<group>"; };
+		278515F21A016FCA000521F6 /* iotlogo76x76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iotlogo76x76.png; sourceTree = "<group>"; };
+		278515F31A016FCA000521F6 /* iotlogo80x80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iotlogo80x80.png; sourceTree = "<group>"; };
+		278515F41A016FCA000521F6 /* iotlogo152x152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iotlogo152x152.png; sourceTree = "<group>"; };
+		278515F51A016FCA000521F6 /* iotlogo180x180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iotlogo180x180.png; sourceTree = "<group>"; };
+		278516061A0170E0000521F6 /* iotlogo120x120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iotlogo120x120.png; sourceTree = "<group>"; };
+		278ACC6B1A12B81A002EF6F0 /* ic_left_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_left_arrow.png; sourceTree = "<group>"; };
+		278ACC6C1A12B81A002EF6F0 /* ic_right_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_right_arrow.png; sourceTree = "<group>"; };
+		278ACC6D1A12B81A002EF6F0 /* ic_down_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_down_arrow.png; sourceTree = "<group>"; };
+		278ACC6E1A12B81A002EF6F0 /* ic_up_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_up_arrow.png; sourceTree = "<group>"; };
+		278ACC771A13C7E7002EF6F0 /* Trace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Trace.h; sourceTree = "<group>"; };
+		278ACC781A13C7E7002EF6F0 /* Trace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Trace.m; sourceTree = "<group>"; };
+		278ACC7B1A2E4A4B002EF6F0 /* ic_gamepad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_gamepad.png; sourceTree = "<group>"; };
+		278ACC7E1A2E7157002EF6F0 /* MessageFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageFactory.m; sourceTree = "<group>"; };
+		278ACC811A2E7177002EF6F0 /* MessageFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageFactory.h; sourceTree = "<group>"; };
+		27A0C7C719EEC766009FA500 /* IoTMobileStarter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IoTMobileStarter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		27A5B6DC19D2064D00E36207 /* orange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = orange.png; sourceTree = "<group>"; };
+		27A5B6DD19D2064D00E36207 /* orange2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = orange2.png; sourceTree = "<group>"; };
+		27B5927919E5B22B00593424 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		27B5927A19E5B22B00593424 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		27B5927C19E5C4B000593424 /* iotlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iotlogo.png; sourceTree = "<group>"; };
+		27B5927E19E635D100593424 /* LogTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogTableViewController.h; sourceTree = "<group>"; };
+		27B5927F19E635D100593424 /* LogTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogTableViewController.m; sourceTree = "<group>"; };
+		27B5928119EC734700593424 /* ic_file.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_file.png; sourceTree = "<group>"; };
+		27B5928319EC74CF00593424 /* iotlogosmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iotlogosmall.png; sourceTree = "<group>"; };
+		27B5928519EC75DF00593424 /* ic_stats.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_stats.png; sourceTree = "<group>"; };
+		44FE445566BB1920A26CE757 /* Pods-IoTMobileStarterDev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IoTMobileStarterDev.release.xcconfig"; path = "Pods/Target Support Files/Pods-IoTMobileStarterDev/Pods-IoTMobileStarterDev.release.xcconfig"; sourceTree = "<group>"; };
+		7CD56E8C393B3ABF25D7EE6E /* libPods-IoTMobileStarterDev.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IoTMobileStarterDev.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DF432763B60A195BFB7D343 /* Pods-IoTMobileStarterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IoTMobileStarterTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IoTMobileStarterTests/Pods-IoTMobileStarterTests.release.xcconfig"; sourceTree = "<group>"; };
+		899DBABB8F9E3ACFA6B7B5CA /* libPods-IoTMobileStarterTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IoTMobileStarterTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		915992FEC9A6FAF2A051EE7B /* Pods-IoTMobileStarterTests.distribution.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IoTMobileStarterTests.distribution.xcconfig"; path = "Pods/Target Support Files/Pods-IoTMobileStarterTests/Pods-IoTMobileStarterTests.distribution.xcconfig"; sourceTree = "<group>"; };
+		93329B01464C8CEABF083E14 /* Pods-IoTMobileStarter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IoTMobileStarter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IoTMobileStarter/Pods-IoTMobileStarter.debug.xcconfig"; sourceTree = "<group>"; };
+		C11608251D48C26E11F608E0 /* Pods-IoTMobileStarterDev.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IoTMobileStarterDev.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IoTMobileStarterDev/Pods-IoTMobileStarterDev.debug.xcconfig"; sourceTree = "<group>"; };
+		DB6032B1B11A0A6891C2D578 /* Pods-IoTMobileStarter.distribution.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IoTMobileStarter.distribution.xcconfig"; path = "Pods/Target Support Files/Pods-IoTMobileStarter/Pods-IoTMobileStarter.distribution.xcconfig"; sourceTree = "<group>"; };
+		E6D5997D3BA295C668506C42 /* Pods-IoTMobileStarter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IoTMobileStarter.release.xcconfig"; path = "Pods/Target Support Files/Pods-IoTMobileStarter/Pods-IoTMobileStarter.release.xcconfig"; sourceTree = "<group>"; };
+		FBDCD946923880C199EAA320 /* libPods-IoTMobileStarter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IoTMobileStarter.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		27468DAE19CB248800435340 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27468DB719CB248800435340 /* CoreGraphics.framework in Frameworks */,
+				27468DB919CB248800435340 /* UIKit.framework in Frameworks */,
+				27468DB519CB248800435340 /* Foundation.framework in Frameworks */,
+				27468E0319CB43D500435340 /* libiosMQTT.a in Frameworks */,
+				5E4663879CAE1CD751FF3CB0 /* libPods-IoTMobileStarterDev.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27468DD219CB248800435340 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27468DD719CB248800435340 /* XCTest.framework in Frameworks */,
+				27468DD919CB248800435340 /* UIKit.framework in Frameworks */,
+				27468DD819CB248800435340 /* Foundation.framework in Frameworks */,
+				FCB47D2AD6EBFDEA7C84841A /* libPods-IoTMobileStarterTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27A0C7AE19EEC766009FA500 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27A0C7AF19EEC766009FA500 /* CoreGraphics.framework in Frameworks */,
+				27A0C7B019EEC766009FA500 /* UIKit.framework in Frameworks */,
+				27A0C7B119EEC766009FA500 /* Foundation.framework in Frameworks */,
+				27A0C7B219EEC766009FA500 /* libiosMQTT.a in Frameworks */,
+				B5ED5847E93ECEC9DB475005 /* libPods-IoTMobileStarter.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		27468DA819CB248800435340 = {
+			isa = PBXGroup;
+			children = (
+				27468DBA19CB248800435340 /* IoTstarter */,
+				27468DDC19CB248800435340 /* IoTstarterTests */,
+				27468DB319CB248800435340 /* Frameworks */,
+				27468DB219CB248800435340 /* Products */,
+				D9D6C3D02413B12C52E7046D /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		27468DB219CB248800435340 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				27468DB119CB248800435340 /* IoTMobileStarter.app */,
+				27468DD519CB248800435340 /* IoTMobileStarter.xctest */,
+				27A0C7C719EEC766009FA500 /* IoTMobileStarter.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		27468DB319CB248800435340 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				27468DB419CB248800435340 /* Foundation.framework */,
+				27468DB619CB248800435340 /* CoreGraphics.framework */,
+				27468DB819CB248800435340 /* UIKit.framework */,
+				27468DD619CB248800435340 /* XCTest.framework */,
+				FBDCD946923880C199EAA320 /* libPods-IoTMobileStarter.a */,
+				7CD56E8C393B3ABF25D7EE6E /* libPods-IoTMobileStarterDev.a */,
+				899DBABB8F9E3ACFA6B7B5CA /* libPods-IoTMobileStarterTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		27468DBA19CB248800435340 /* IoTstarter */ = {
+			isa = PBXGroup;
+			children = (
+				27468DC319CB248800435340 /* AppDelegate.h */,
+				27468DC419CB248800435340 /* AppDelegate.m */,
+				27468DCF19CB248800435340 /* Images.xcassets */,
+				2763729919D3419A00706945 /* icons */,
+				27468E0419CB43DB00435340 /* include */,
+				27468E0519CB43E000435340 /* lib */,
+				27FA87E019DF2174005EAFBF /* storyboards */,
+				27468DBB19CB248800435340 /* Supporting Files */,
+				27FA87E119DF218E005EAFBF /* utils */,
+				27FA87DF19DF2166005EAFBF /* views */,
+			);
+			path = IoTstarter;
+			sourceTree = "<group>";
+		};
+		27468DBB19CB248800435340 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				27A5B6DC19D2064D00E36207 /* orange.png */,
+				27A5B6DD19D2064D00E36207 /* orange2.png */,
+				27468DBC19CB248800435340 /* IoTMobileStarter-Info.plist */,
+				27468DBD19CB248800435340 /* InfoPlist.strings */,
+				27468DC019CB248800435340 /* main.m */,
+				27468DC219CB248800435340 /* IoTMobileStarter-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		27468DDC19CB248800435340 /* IoTstarterTests */ = {
+			isa = PBXGroup;
+			children = (
+				27468DE219CB248800435340 /* IoTstarterTests.m */,
+				27468DDD19CB248800435340 /* Supporting Files */,
+			);
+			path = IoTstarterTests;
+			sourceTree = "<group>";
+		};
+		27468DDD19CB248800435340 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				27468DDE19CB248800435340 /* IoTMobileStarterTests-Info.plist */,
+				27468DDF19CB248800435340 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		27468E0419CB43DB00435340 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				27468E0219CB43D500435340 /* MqttOCClient.h */,
+			);
+			name = include;
+			sourceTree = "<group>";
+		};
+		27468E0519CB43E000435340 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				27468E0119CB43D500435340 /* libiosMQTT.a */,
+			);
+			name = lib;
+			sourceTree = "<group>";
+		};
+		2763729919D3419A00706945 /* icons */ = {
+			isa = PBXGroup;
+			children = (
+				274B158B19F6F6F500FF15DE /* ic_chevron-left.png */,
+				274B158A19F6F6F500FF15DE /* ic_chevron-right.png */,
+				2763729D19D3419A00706945 /* ic_circle_question_mark.png */,
+				2763729B19D3419A00706945 /* ic_cogwheels.png */,
+				278ACC6D1A12B81A002EF6F0 /* ic_down_arrow.png */,
+				27B5928119EC734700593424 /* ic_file.png */,
+				278ACC7B1A2E4A4B002EF6F0 /* ic_gamepad.png */,
+				2763729A19D3419A00706945 /* ic_home.png */,
+				278ACC6B1A12B81A002EF6F0 /* ic_left_arrow.png */,
+				2763729C19D3419A00706945 /* ic_picture.png */,
+				278ACC6C1A12B81A002EF6F0 /* ic_right_arrow.png */,
+				27B5928519EC75DF00593424 /* ic_stats.png */,
+				278ACC6E1A12B81A002EF6F0 /* ic_up_arrow.png */,
+				27555DB61A5B211F00E5A7D0 /* ic_icon.png */,
+				27555DB71A5B211F00E5A7D0 /* ic_logo.png */,
+				27B5927C19E5C4B000593424 /* iotlogo.png */,
+				2730A23B19FA93F300B6A0C3 /* iotlogo2.png */,
+				278515EE1A016FCA000521F6 /* iotlogo29x29.png */,
+				278515EF1A016FCA000521F6 /* iotlogo40x40.png */,
+				278515F01A016FCA000521F6 /* iotlogo58x58.png */,
+				278515F11A016FCA000521F6 /* iotlogo60x60.png */,
+				278515F21A016FCA000521F6 /* iotlogo76x76.png */,
+				278515F31A016FCA000521F6 /* iotlogo80x80.png */,
+				278516061A0170E0000521F6 /* iotlogo120x120.png */,
+				278515F41A016FCA000521F6 /* iotlogo152x152.png */,
+				278515F51A016FCA000521F6 /* iotlogo180x180.png */,
+				27B5928319EC74CF00593424 /* iotlogosmall.png */,
+			);
+			path = icons;
+			sourceTree = "<group>";
+		};
+		27FA87DF19DF2166005EAFBF /* views */ = {
+			isa = PBXGroup;
+			children = (
+				276372A219D4A43800706945 /* DrawingView.h */,
+				276372A319D4A43800706945 /* DrawingView.m */,
+				27468DCC19CB248800435340 /* IoTStarterViewController.h */,
+				27468DCD19CB248800435340 /* IoTStarterViewController.m */,
+				27B5927919E5B22B00593424 /* LoginViewController.h */,
+				27B5927A19E5B22B00593424 /* LoginViewController.m */,
+				27B5927E19E635D100593424 /* LogTableViewController.h */,
+				27B5927F19E635D100593424 /* LogTableViewController.m */,
+				275172021A1256A600BC0072 /* RemoteViewController.h */,
+				275172031A1256A600BC0072 /* RemoteViewController.m */,
+				275172061A12911D00BC0072 /* DPadView.h */,
+				275172071A12911D00BC0072 /* DPadView.m */,
+				277C443B1A2FAD780097313A /* ProfilesTableViewController.h */,
+				277C443C1A2FAD780097313A /* ProfilesTableViewController.m */,
+			);
+			name = views;
+			sourceTree = "<group>";
+		};
+		27FA87E019DF2174005EAFBF /* storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				27468DC919CB248800435340 /* Main_iPad.storyboard */,
+				27468DC619CB248800435340 /* Main_iPhone.storyboard */,
+				2729B46C19DDFB4B00356440 /* Second_iPhone.storyboard */,
+			);
+			name = storyboards;
+			sourceTree = "<group>";
+		};
+		27FA87E119DF218E005EAFBF /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				278ACC771A13C7E7002EF6F0 /* Trace.h */,
+				278ACC781A13C7E7002EF6F0 /* Trace.m */,
+				27468DF519CB407800435340 /* Callbacks.h */,
+				27468DF619CB407800435340 /* Callbacks.m */,
+				27468DFE19CB40AC00435340 /* Constants.h */,
+				27468DFF19CB40AC00435340 /* Constants.m */,
+				27468DF219CB406F00435340 /* Messenger.h */,
+				27468DF319CB406F00435340 /* Messenger.m */,
+				27468DF819CB409800435340 /* TopicFactory.h */,
+				27468DF919CB409800435340 /* TopicFactory.m */,
+				278ACC7E1A2E7157002EF6F0 /* MessageFactory.m */,
+				278ACC811A2E7177002EF6F0 /* MessageFactory.h */,
+				277C44371A2F92770097313A /* IoTProfile.m */,
+				277C443A1A2F92840097313A /* IoTProfile.h */,
+			);
+			name = utils;
+			sourceTree = "<group>";
+		};
+		D9D6C3D02413B12C52E7046D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				93329B01464C8CEABF083E14 /* Pods-IoTMobileStarter.debug.xcconfig */,
+				E6D5997D3BA295C668506C42 /* Pods-IoTMobileStarter.release.xcconfig */,
+				DB6032B1B11A0A6891C2D578 /* Pods-IoTMobileStarter.distribution.xcconfig */,
+				C11608251D48C26E11F608E0 /* Pods-IoTMobileStarterDev.debug.xcconfig */,
+				44FE445566BB1920A26CE757 /* Pods-IoTMobileStarterDev.release.xcconfig */,
+				167DC29E51992A46AED6C1A8 /* Pods-IoTMobileStarterDev.distribution.xcconfig */,
+				0A751946FC5E9F30CFA64082 /* Pods-IoTMobileStarterTests.debug.xcconfig */,
+				7DF432763B60A195BFB7D343 /* Pods-IoTMobileStarterTests.release.xcconfig */,
+				915992FEC9A6FAF2A051EE7B /* Pods-IoTMobileStarterTests.distribution.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		27468DB019CB248800435340 /* IoTMobileStarterDev */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27468DE619CB248800435340 /* Build configuration list for PBXNativeTarget "IoTMobileStarterDev" */;
+			buildPhases = (
+				2582386353AF7033F4FCF71E /* [CP] Check Pods Manifest.lock */,
+				27468DAD19CB248800435340 /* Sources */,
+				27468DAE19CB248800435340 /* Frameworks */,
+				27468DAF19CB248800435340 /* Resources */,
+				4BE9C187BFDA8F473BE5E117 /* [CP] Embed Pods Frameworks */,
+				C9D982C371720C3AA4C23F8C /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IoTMobileStarterDev;
+			productName = IoTstarter;
+			productReference = 27468DB119CB248800435340 /* IoTMobileStarter.app */;
+			productType = "com.apple.product-type.application";
+		};
+		27468DD419CB248800435340 /* IoTMobileStarterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27468DE919CB248800435340 /* Build configuration list for PBXNativeTarget "IoTMobileStarterTests" */;
+			buildPhases = (
+				08BAB872A08980387AA8ADE8 /* [CP] Check Pods Manifest.lock */,
+				27468DD119CB248800435340 /* Sources */,
+				27468DD219CB248800435340 /* Frameworks */,
+				27468DD319CB248800435340 /* Resources */,
+				757DCBB314F4D84A7878974E /* [CP] Embed Pods Frameworks */,
+				8A8B2308F3E0752B34DB064D /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				27468DDB19CB248800435340 /* PBXTargetDependency */,
+			);
+			name = IoTMobileStarterTests;
+			productName = IoTstarterTests;
+			productReference = 27468DD519CB248800435340 /* IoTMobileStarter.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		27A0C79F19EEC766009FA500 /* IoTMobileStarter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27A0C7C319EEC766009FA500 /* Build configuration list for PBXNativeTarget "IoTMobileStarter" */;
+			buildPhases = (
+				4B12E7913BE0B16E37A45901 /* [CP] Check Pods Manifest.lock */,
+				27A0C7A019EEC766009FA500 /* Sources */,
+				27A0C7AE19EEC766009FA500 /* Frameworks */,
+				27A0C7B319EEC766009FA500 /* Resources */,
+				90934B0A7BFD39E44321318C /* [CP] Embed Pods Frameworks */,
+				6A2437D9B18F3F2B33449D35 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IoTMobileStarter;
+			productName = IoTstarter;
+			productReference = 27A0C7C719EEC766009FA500 /* IoTMobileStarter.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		27468DA919CB248800435340 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Thomas Suedbroecker";
+				TargetAttributes = {
+					27468DB019CB248800435340 = {
+						DevelopmentTeam = P9M2BHXPN4;
+					};
+					27468DD419CB248800435340 = {
+						TestTargetID = 27468DB019CB248800435340;
+					};
+					27A0C79F19EEC766009FA500 = {
+						DevelopmentTeam = P9M2BHXPN4;
+					};
+				};
+			};
+			buildConfigurationList = 27468DAC19CB248800435340 /* Build configuration list for PBXProject "IoTMobileStarter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 27468DA819CB248800435340;
+			productRefGroup = 27468DB219CB248800435340 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				27A0C79F19EEC766009FA500 /* IoTMobileStarter */,
+				27468DB019CB248800435340 /* IoTMobileStarterDev */,
+				27468DD419CB248800435340 /* IoTMobileStarterTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		27468DAF19CB248800435340 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27555DBB1A5B211F00E5A7D0 /* ic_logo.png in Resources */,
+				278515F71A016FCA000521F6 /* iotlogo29x29.png in Resources */,
+				27E4809F19F8560F00762CEB /* ic_chevron-right.png in Resources */,
+				27555DB91A5B211F00E5A7D0 /* ic_icon.png in Resources */,
+				278ACC701A12B81A002EF6F0 /* ic_left_arrow.png in Resources */,
+				27468DCB19CB248800435340 /* Main_iPad.storyboard in Resources */,
+				2730A23D19FA94CA00B6A0C3 /* iotlogo2.png in Resources */,
+				278515F91A016FCA000521F6 /* iotlogo40x40.png in Resources */,
+				27E480A019F8561200762CEB /* ic_chevron-left.png in Resources */,
+				2763729F19D3419A00706945 /* ic_cogwheels.png in Resources */,
+				278515FF1A016FCA000521F6 /* iotlogo76x76.png in Resources */,
+				278ACC741A12B81A002EF6F0 /* ic_down_arrow.png in Resources */,
+				278ACC721A12B81A002EF6F0 /* ic_right_arrow.png in Resources */,
+				27468DD019CB248800435340 /* Images.xcassets in Resources */,
+				27B5927D19E5C4B000593424 /* iotlogo.png in Resources */,
+				27A5B6DF19D2064D00E36207 /* orange2.png in Resources */,
+				278ACC761A12B81A002EF6F0 /* ic_up_arrow.png in Resources */,
+				276372A019D3419A00706945 /* ic_picture.png in Resources */,
+				278ACC7D1A2E4A4B002EF6F0 /* ic_gamepad.png in Resources */,
+				278515FB1A016FCA000521F6 /* iotlogo58x58.png in Resources */,
+				278516081A0170E0000521F6 /* iotlogo120x120.png in Resources */,
+				27B5928219EC734700593424 /* ic_file.png in Resources */,
+				276372A119D3419A00706945 /* ic_circle_question_mark.png in Resources */,
+				278515FD1A016FCA000521F6 /* iotlogo60x60.png in Resources */,
+				278516011A016FCA000521F6 /* iotlogo80x80.png in Resources */,
+				2729B46D19DDFB4B00356440 /* Second_iPhone.storyboard in Resources */,
+				2763729E19D3419A00706945 /* ic_home.png in Resources */,
+				278516031A016FCA000521F6 /* iotlogo152x152.png in Resources */,
+				278516051A016FCA000521F6 /* iotlogo180x180.png in Resources */,
+				27468DC819CB248800435340 /* Main_iPhone.storyboard in Resources */,
+				27B5928419EC74CF00593424 /* iotlogosmall.png in Resources */,
+				27B5928619EC75DF00593424 /* ic_stats.png in Resources */,
+				27A5B6DE19D2064D00E36207 /* orange.png in Resources */,
+				27468DBF19CB248800435340 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27468DD319CB248800435340 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27468DE119CB248800435340 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27A0C7B319EEC766009FA500 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27555DBA1A5B211F00E5A7D0 /* ic_logo.png in Resources */,
+				278515F61A016FCA000521F6 /* iotlogo29x29.png in Resources */,
+				274B158C19F6F6F500FF15DE /* ic_chevron-right.png in Resources */,
+				27555DB81A5B211F00E5A7D0 /* ic_icon.png in Resources */,
+				278ACC6F1A12B81A002EF6F0 /* ic_left_arrow.png in Resources */,
+				27A0C7B419EEC766009FA500 /* Main_iPad.storyboard in Resources */,
+				2730A23C19FA93F300B6A0C3 /* iotlogo2.png in Resources */,
+				278515F81A016FCA000521F6 /* iotlogo40x40.png in Resources */,
+				274B158D19F6F6F500FF15DE /* ic_chevron-left.png in Resources */,
+				27A0C7B519EEC766009FA500 /* ic_cogwheels.png in Resources */,
+				278515FE1A016FCA000521F6 /* iotlogo76x76.png in Resources */,
+				278ACC731A12B81A002EF6F0 /* ic_down_arrow.png in Resources */,
+				278ACC711A12B81A002EF6F0 /* ic_right_arrow.png in Resources */,
+				27A0C7B619EEC766009FA500 /* Images.xcassets in Resources */,
+				27A0C7B719EEC766009FA500 /* iotlogo.png in Resources */,
+				27A0C7B819EEC766009FA500 /* orange2.png in Resources */,
+				278ACC751A12B81A002EF6F0 /* ic_up_arrow.png in Resources */,
+				27A0C7B919EEC766009FA500 /* ic_picture.png in Resources */,
+				278ACC7C1A2E4A4B002EF6F0 /* ic_gamepad.png in Resources */,
+				278515FA1A016FCA000521F6 /* iotlogo58x58.png in Resources */,
+				278516071A0170E0000521F6 /* iotlogo120x120.png in Resources */,
+				27A0C7BA19EEC766009FA500 /* ic_file.png in Resources */,
+				27A0C7BB19EEC766009FA500 /* ic_circle_question_mark.png in Resources */,
+				278515FC1A016FCA000521F6 /* iotlogo60x60.png in Resources */,
+				278516001A016FCA000521F6 /* iotlogo80x80.png in Resources */,
+				27A0C7BC19EEC766009FA500 /* Second_iPhone.storyboard in Resources */,
+				27A0C7BD19EEC766009FA500 /* ic_home.png in Resources */,
+				278516021A016FCA000521F6 /* iotlogo152x152.png in Resources */,
+				278516041A016FCA000521F6 /* iotlogo180x180.png in Resources */,
+				27A0C7BE19EEC766009FA500 /* Main_iPhone.storyboard in Resources */,
+				27A0C7BF19EEC766009FA500 /* iotlogosmall.png in Resources */,
+				27A0C7C019EEC766009FA500 /* ic_stats.png in Resources */,
+				27A0C7C119EEC766009FA500 /* orange.png in Resources */,
+				27A0C7C219EEC766009FA500 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		08BAB872A08980387AA8ADE8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2582386353AF7033F4FCF71E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4B12E7913BE0B16E37A45901 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4BE9C187BFDA8F473BE5E117 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IoTMobileStarterDev/Pods-IoTMobileStarterDev-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6A2437D9B18F3F2B33449D35 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IoTMobileStarter/Pods-IoTMobileStarter-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		757DCBB314F4D84A7878974E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IoTMobileStarterTests/Pods-IoTMobileStarterTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8A8B2308F3E0752B34DB064D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IoTMobileStarterTests/Pods-IoTMobileStarterTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		90934B0A7BFD39E44321318C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IoTMobileStarter/Pods-IoTMobileStarter-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C9D982C371720C3AA4C23F8C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IoTMobileStarterDev/Pods-IoTMobileStarterDev-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		27468DAD19CB248800435340 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				277C44391A2F92770097313A /* IoTProfile.m in Sources */,
+				27468DFA19CB409800435340 /* TopicFactory.m in Sources */,
+				275172091A1293FD00BC0072 /* DPadView.m in Sources */,
+				277C443E1A2FAD780097313A /* ProfilesTableViewController.m in Sources */,
+				27468DCE19CB248800435340 /* IoTStarterViewController.m in Sources */,
+				27468DC519CB248800435340 /* AppDelegate.m in Sources */,
+				278ACC801A2E7157002EF6F0 /* MessageFactory.m in Sources */,
+				278ACC7A1A13C7E7002EF6F0 /* Trace.m in Sources */,
+				27B5928019E635D100593424 /* LogTableViewController.m in Sources */,
+				27468E0019CB40AC00435340 /* Constants.m in Sources */,
+				27468DF719CB407800435340 /* Callbacks.m in Sources */,
+				27468DC119CB248800435340 /* main.m in Sources */,
+				27B5927B19E5B22B00593424 /* LoginViewController.m in Sources */,
+				27468DF419CB406F00435340 /* Messenger.m in Sources */,
+				275172051A1258BB00BC0072 /* RemoteViewController.m in Sources */,
+				276372A419D4A43800706945 /* DrawingView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27468DD119CB248800435340 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27468DE319CB248800435340 /* IoTstarterTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27A0C7A019EEC766009FA500 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				277C44381A2F92770097313A /* IoTProfile.m in Sources */,
+				27A0C7A119EEC766009FA500 /* TopicFactory.m in Sources */,
+				275172081A12911D00BC0072 /* DPadView.m in Sources */,
+				277C443D1A2FAD780097313A /* ProfilesTableViewController.m in Sources */,
+				27A0C7A219EEC766009FA500 /* IoTStarterViewController.m in Sources */,
+				27A0C7A319EEC766009FA500 /* AppDelegate.m in Sources */,
+				278ACC7F1A2E7157002EF6F0 /* MessageFactory.m in Sources */,
+				278ACC791A13C7E7002EF6F0 /* Trace.m in Sources */,
+				27A0C7A519EEC766009FA500 /* LogTableViewController.m in Sources */,
+				27A0C7A619EEC766009FA500 /* Constants.m in Sources */,
+				27A0C7A719EEC766009FA500 /* Callbacks.m in Sources */,
+				27A0C7A919EEC766009FA500 /* main.m in Sources */,
+				27A0C7AA19EEC766009FA500 /* LoginViewController.m in Sources */,
+				27A0C7AC19EEC766009FA500 /* Messenger.m in Sources */,
+				275172041A1256A600BC0072 /* RemoteViewController.m in Sources */,
+				27A0C7AD19EEC766009FA500 /* DrawingView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		27468DDB19CB248800435340 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 27468DB019CB248800435340 /* IoTMobileStarterDev */;
+			targetProxy = 27468DDA19CB248800435340 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		27468DBD19CB248800435340 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27468DBE19CB248800435340 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		27468DC619CB248800435340 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27468DC719CB248800435340 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		27468DC919CB248800435340 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27468DCA19CB248800435340 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		27468DDF19CB248800435340 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27468DE019CB248800435340 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		27468DE419CB248800435340 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: International Business Machines";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: International Business Machines";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_BITCODE = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		27468DE519CB248800435340 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: International Business Machines";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: International Business Machines";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_BITCODE = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		27468DE719CB248800435340 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C11608251D48C26E11F608E0 /* Pods-IoTMobileStarterDev.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IoTstarter/IoTMobileStarter-Prefix.pch";
+				INFOPLIST_FILE = "IoTstarter/IoTMobileStarter-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/IoTstarter",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "IBM.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = IoTMobileStarter;
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		27468DE819CB248800435340 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44FE445566BB1920A26CE757 /* Pods-IoTMobileStarterDev.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IoTstarter/IoTMobileStarter-Prefix.pch";
+				INFOPLIST_FILE = "IoTstarter/IoTMobileStarter-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/IoTstarter",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "IBM.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = IoTMobileStarter;
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		27468DEA19CB248800435340 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A751946FC5E9F30CFA64082 /* Pods-IoTMobileStarterTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/IoTstarter.app/IoTstarter";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IoTstarter/IoTMobileStarter-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "IoTstarterTests/IoTMobileStarterTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "IBM.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = IoTMobileStarter;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		27468DEB19CB248800435340 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7DF432763B60A195BFB7D343 /* Pods-IoTMobileStarterTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/IoTstarter.app/IoTstarter";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IoTstarter/IoTMobileStarter-Prefix.pch";
+				INFOPLIST_FILE = "IoTstarterTests/IoTMobileStarterTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "IBM.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = IoTMobileStarter;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+		27A0C77219EEC715009FA500 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: International Business Machines";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: International Business Machines";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_BITCODE = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Distribution;
+		};
+		27A0C77319EEC715009FA500 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 167DC29E51992A46AED6C1A8 /* Pods-IoTMobileStarterDev.distribution.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IoTstarter/IoTMobileStarter-Prefix.pch";
+				INFOPLIST_FILE = "IoTstarter/IoTMobileStarter-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/IoTstarter",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "IBM.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = IoTMobileStarter;
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Distribution;
+		};
+		27A0C77419EEC715009FA500 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 915992FEC9A6FAF2A051EE7B /* Pods-IoTMobileStarterTests.distribution.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/IoTstarter.app/IoTstarter";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IoTstarter/IoTMobileStarter-Prefix.pch";
+				INFOPLIST_FILE = "IoTstarterTests/IoTMobileStarterTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "IBM.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = IoTMobileStarter;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Distribution;
+		};
+		27A0C7C419EEC766009FA500 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93329B01464C8CEABF083E14 /* Pods-IoTMobileStarter.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IoTstarter/IoTMobileStarter-Prefix.pch";
+				INFOPLIST_FILE = "IoTstarter-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/IoTstarter",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tsuedbro.IoTMobileStarter;
+				PRODUCT_NAME = IoTMobileStarter;
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		27A0C7C519EEC766009FA500 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6D5997D3BA295C668506C42 /* Pods-IoTMobileStarter.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IoTstarter/IoTMobileStarter-Prefix.pch";
+				INFOPLIST_FILE = "IoTstarter-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/IoTstarter",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tsuedbro.IoTMobileStarter;
+				PRODUCT_NAME = IoTMobileStarter;
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		27A0C7C619EEC766009FA500 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB6032B1B11A0A6891C2D578 /* Pods-IoTMobileStarter.distribution.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IoTstarter/IoTMobileStarter-Prefix.pch";
+				INFOPLIST_FILE = "IoTstarter-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/IoTstarter",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tsuedbro.IoTMobileStarter;
+				PRODUCT_NAME = IoTMobileStarter;
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Distribution;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		27468DAC19CB248800435340 /* Build configuration list for PBXProject "IoTMobileStarter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27468DE419CB248800435340 /* Debug */,
+				27468DE519CB248800435340 /* Release */,
+				27A0C77219EEC715009FA500 /* Distribution */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		27468DE619CB248800435340 /* Build configuration list for PBXNativeTarget "IoTMobileStarterDev" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27468DE719CB248800435340 /* Debug */,
+				27468DE819CB248800435340 /* Release */,
+				27A0C77319EEC715009FA500 /* Distribution */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		27468DE919CB248800435340 /* Build configuration list for PBXNativeTarget "IoTMobileStarterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27468DEA19CB248800435340 /* Debug */,
+				27468DEB19CB248800435340 /* Release */,
+				27A0C77419EEC715009FA500 /* Distribution */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		27A0C7C319EEC766009FA500 /* Build configuration list for PBXNativeTarget "IoTMobileStarter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27A0C7C419EEC766009FA500 /* Debug */,
+				27A0C7C519EEC766009FA500 /* Release */,
+				27A0C7C619EEC766009FA500 /* Distribution */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 27468DA919CB248800435340 /* Project object */;
+}

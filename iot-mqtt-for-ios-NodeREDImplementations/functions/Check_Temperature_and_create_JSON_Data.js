@@ -44,40 +44,40 @@ if ( msg !== null)
     //-----------------------------------------------------------------------
     data.temp = "20.0000"; // default
     if (msg.payload.d.AmbTemp !== undefined) {
-        data.temp     = msg.payload.d.AmbTemp;      // Typical Apple datastructure
+        data.temp     = "" + msg.payload.d.AmbTemp + "";      // Typical Apple datastructure
     }
 
     if (msg.payload.d.ambient_temp !== undefined) {
-        data.temp     = msg.payload.d.ambient_temp;  // Typical Android datastructure
+        data.temp     = "" + msg.payload.d.ambient_temp + "";  // Typical Android datastructure
     }
 
     if (msg.payload.d.temp !== undefined) {
-        data.temp     = msg.payload.d.temp;          // Typical Simulator datastructure
+        data.temp     = "" + msg.payload.d.temp + "";          // Typical Simulator datastructure
     }
 
     //-------------------------IPTEMP-------------------------------------------------
     data.iptemp = 20.0000; //default
     if (msg.payload.d.IRTemp !== undefined) {
-        data.irtemp   = msg.payload.d.IRTemp;        // Typical Apple datastructure
+        data.irtemp   = "" + msg.payload.d.IRTemp + "";        // Typical Apple datastructure
     }
 
     if (msg.payload.d.object_temp !== undefined) {
-        data.irtemp   = msg.payload.d.object_temp;   // Typical Android datastructure
+        data.irtemp   = "" + msg.payload.d.object_temp + "";   // Typical Android datastructure
     }
 
     if (msg.payload.d.objectTemp !== undefined) {
-        data.irtemp   = msg.payload.d.objectTemp;    // Typical Simulator datastructure
+        data.irtemp   = msg.payload.d.objectTemp + "";    // Typical Simulator datastructure
     }
 
     //-------------------------OPTICAL---------------------------------------------
     data.optical = 0; // default if not defined by others
 
     if (msg.payload.d.optical !== undefined) {
-        data.optical  = msg.payload.d.optical;      // Typical Apple datastructure
+        data.optical  = "" + msg.payload.d.optical + "";      // Typical Apple datastructure
     }
 
     if (msg.payload.d.light !== undefined) {
-        data.optical  = msg.payload.d.light;      // Typical Android datastructure
+        data.optical  = "" + msg.payload.d.light + "";      // Typical Android datastructure
     }
 
     //--------------------------------------------------------------------------

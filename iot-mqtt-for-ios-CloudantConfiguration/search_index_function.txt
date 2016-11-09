@@ -75,3 +75,18 @@ function(doc)
     index("theTime", doc.sensordatavalue.time, {"store": true, "facet":true});
   }
 }
+
+Define a new View:
+==================
+
+DesignDocument: _design/_d_search
+IndexName:      view_findAll
+
+Map Function:
+=============
+
+function (doc) {
+  if (doc.sensordatavalue.status) {
+    emit(doc.sensordatavalue.status, doc.sensordatavalue.deviceType, doc.sensordatavalue.date, doc.sensordatavalue.deviceId, doc.sensordatavalue.temp);
+  }
+}
