@@ -3,7 +3,6 @@ Design Index
 
 {
   "_id": "_design/_d_search",
-  "_rev": "2-f317d35d97745b0e0efa0293bbeb1de6",
   "views": {
     "view_findAll": {
       "map": "function (doc) {\n  if (doc.sensordatavalue.status) {\n    emit(doc.sensordatavalue.status, doc.sensordatavalue.deviceType, doc.sensordatavalue.date, doc.sensordatavalue.deviceId, doc.sensordatavalue.temp);\n  }\n}"
