@@ -1,0 +1,19 @@
+Design Index
+============
+
+{
+  "_id": "_design/_d_search",
+  "_rev": "2-f317d35d97745b0e0efa0293bbeb1de6",
+  "views": {
+    "view_findAll": {
+      "map": "function (doc) {\n  if (doc.sensordatavalue.status) {\n    emit(doc.sensordatavalue.status, doc.sensordatavalue.deviceType, doc.sensordatavalue.date, doc.sensordatavalue.deviceId, doc.sensordatavalue.temp);\n  }\n}"
+    }
+  },
+  "language": "javascript",
+  "indexes": {
+    "_inx_all": {
+      "analyzer": "standard",
+      "index": "function(doc)\n{\n  index(\"default\", doc._id);\n  if(doc.sensordatavalue.comment){\n    index(\"theComment\", doc.sensordatavalue.comment, {\"store\": true, \"facet\":true});\n  }\n  if(doc.sensordatavalue.date){\n    index(\"theDate\", doc.sensordatavalue.date, {\"store\": true, \"facet\":true});\n  }\n  if(doc.sensordatavalue.deviceId){\n    index(\"theDeviceId\", doc.sensordatavalue.deviceId, {\"store\": true, \"facet\":true});\n  }\n  if(doc.sensordatavalue.deviceImageURI){\n    index(\"theDeviceImageURI\", doc.sensordatavalue.deviceImageURI, {\"store\": true, \"facet\":true});\n  }\n  if(doc.sensordatavalue.deviceType){\n    index(\"theDeviceType\", doc.sensordatavalue.deviceType, {\"store\": true, \"facet\":true});\n  }\n  if(doc.sensordatavalue.gtfs_latitude){\n    index(\"theGtfs_latitude\", doc.sensordatavalue.gtfs_latitude, {\"store\": true, \"facet\":true});\n  }\n  if(doc.sensordatavalue.gtfs_longitude){\n    index(\"theGtfs_longitude\", doc.sensordatavalue.gtfs_longitude, {\"store\": true, \"facet\":true});\n  }\n/* ++++   not now for index +++++++\n  if(doc.sensordatavalue.image){\n    index(\"theImagee\", doc.sensordatavalue.image, {\"store\": true, \"facet\":true});\n  }\n*/\n  if(doc.sensordatavalue.imageLocalURI){\n    index(\"theImageLocalURI\", doc.sensordatavalue.imageLocalURI, {\"store\": true, \"facet\":true});\n  }\n  if(doc.sensordatavalue.irtemp){\n    index(\"theIrtemp\", doc.sensordatavalue.irtemp, {\"store\": true, \"facet\":true});\n  }\n  if(doc.sensordatavalue.message){\n    index(\"theMessage\", doc.sensordatavalue.message, {\"store\": true, \"facet\":true});\n  }\n if(doc.sensordatavalue.optical){\n    index(\"theOptical\", doc.sensordatavalue.optical, {\"store\": true, \"facet\":true});\n  }\n  if(doc.sensordatavalue.sensorImage){\n    index(\"theSensorImage\", doc.sensordatavalue.sensorImage, {\"store\": true, \"facet\":true});\n  }\n  if(doc.sensordatavalue.status){\n    index(\"theStatus\", doc.sensordatavalue.status, {\"store\": true, \"facet\":true});\n  }\n  if(doc.sensordatavalue.temp){\n    index(\"theTemp\", doc.sensordatavalue.temp, {\"store\": true, \"facet\":true});\n  }\n  if(doc.sensordatavalue.time){\n    index(\"theTime\", doc.sensordatavalue.time, {\"store\": true, \"facet\":true});\n  }\n}"
+    }
+  }
+}
